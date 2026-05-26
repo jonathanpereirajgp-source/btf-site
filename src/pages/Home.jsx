@@ -87,11 +87,10 @@ export default function Home() {
             >
               <div className="aspect-[4/5] frame">
                 <img src="/team/equipe-trio.jpg" alt="Fundadores BTF" className="object-[50%_72%]" />
+                <figcaption className="absolute bottom-5 left-5 z-20 bg-moss-deep text-paper px-5 py-3 shadow-[0_12px_30px_-12px_rgba(0,0,0,0.45)]">
+                  <span className="text-[12px] font-semibold tracking-tight">Fundadores BTF Soluções em Dados</span>
+                </figcaption>
               </div>
-              <figcaption className="mt-5 flex justify-between items-baseline text-[12px] text-paper/55">
-                <span>Fundadores BTF Soluções em Dados</span>
-                <span>3 doutorados</span>
-              </figcaption>
             </motion.figure>
           </div>
         </div>
@@ -206,9 +205,9 @@ export default function Home() {
             <div className="absolute inset-0 frame">
               <img src={photos.sistemaHome} alt="Sistema ambiental complexo" />
             </div>
-            <figcaption className="absolute bottom-8 left-8 right-8 lg:bottom-12 lg:left-12 lg:right-12 z-10 flex justify-between text-paper/90 text-[12px] tracking-[0.04em]">
-              <span>Especialidade</span>
-              <span>Ciência ecológica aplicada</span>
+            <figcaption className="absolute bottom-6 left-6 lg:bottom-10 lg:left-10 z-20 bg-copper text-paper px-5 py-3.5 shadow-[0_14px_36px_-14px_rgba(0,0,0,0.5)]">
+              <div className="text-[10px] tracking-[0.18em] uppercase text-paper/80 mb-1">Especialidade</div>
+              <div className="text-[14px] font-semibold tracking-tight">Ciência ecológica aplicada</div>
             </figcaption>
           </figure>
 
