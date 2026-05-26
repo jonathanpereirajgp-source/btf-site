@@ -1,0 +1,190 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─────────────── BRAND TYPOGRAPHY ─────────────── */
+@font-face {
+  font-family: 'I Brand';
+  src: url('/fonts/Ibrand.woff2') format('woff2'),
+       url('/fonts/Ibrand.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: light;
+  --c-moss: #AED140;
+  --c-moss-dark: #9DBE36;
+}
+
+html {
+  background: #F6F2EA;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Montserrat', system-ui, sans-serif;
+  color: #142235;
+  background: #F6F2EA;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection { background: #AED140; color: #142235; }
+
+/* Display — I Brand */
+h1, h2, h3, h4 {
+  font-family: 'I Brand', Fraunces, Georgia, serif;
+  font-weight: 400;
+  letter-spacing: -0.015em;
+}
+
+/* I Brand is single-weight — italic emphasis uses a refined alternative */
+em, .em-editorial {
+  font-style: italic;
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 300;
+  font-variation-settings: "opsz" 144, "SOFT" 100;
+}
+
+@layer components {
+  .wrap { @apply max-w-[1280px] mx-auto px-6 md:px-10 lg:px-14; }
+
+  .label {
+    @apply inline-flex items-center gap-3 text-[11px] font-medium tracking-[0.18em] uppercase text-ink-500;
+  }
+  .label-dark { @apply text-paper/55; }
+
+  /* ─── Buttons ─── */
+  .btn {
+    @apply inline-flex items-center gap-3 px-7 py-3.5 text-[13.5px] font-medium tracking-tight transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)];
+    letter-spacing: -0.005em;
+  }
+
+  /* Primary — brand green */
+  .btn-primary {
+    @apply btn bg-moss text-ink-900;
+  }
+  .btn-primary:hover {
+    background-color: var(--c-moss-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 14px 36px -16px rgba(174, 209, 64, 0.55);
+  }
+
+  /* Solid dark (used on light sections where green wouldn't read well) */
+  .btn-solid {
+    @apply btn bg-ink-900 text-paper hover:bg-ink-800;
+  }
+
+  .btn-outline {
+    @apply btn border border-ink-900/30 text-ink-900 hover:bg-ink-900 hover:text-paper hover:border-ink-900;
+  }
+  .btn-outline-dark {
+    @apply btn border border-paper/30 text-paper hover:bg-paper hover:text-ink-900 hover:border-paper;
+  }
+
+  .btn-text {
+    @apply inline-flex items-center gap-2 text-[13.5px] font-medium text-ink-900 border-b border-ink-900/30 pb-1 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:border-moss hover:text-ink-800 hover:gap-3;
+  }
+  .btn-text-dark {
+    @apply inline-flex items-center gap-2 text-[13.5px] font-medium text-paper border-b border-paper/30 pb-1 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:border-moss hover:gap-3;
+  }
+}
+
+/* Editorial underline */
+.link-anim {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.link-anim:hover { background-size: 100% 1px; }
+
+/* Brand accent atoms */
+.dot-moss {
+  width: 7px; height: 7px;
+  background: #AED140;
+  border-radius: 999px;
+  display: inline-block;
+  box-shadow: 0 0 0 3px rgba(174, 209, 64, 0.14);
+}
+.dot-copper { width: 6px; height: 6px; background: #F04F27; border-radius: 999px; display: inline-block; }
+
+/* Subtle brand rule — used between sections occasionally */
+.rule-moss {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(174,209,64,0.6), transparent);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb { background: #D5CDBC; border-radius: 8px; }
+::-webkit-scrollbar-track { background: #F6F2EA; }
+
+/* ─────── Editorial imagery ─────── */
+.figure-editorial { position: relative; isolation: isolate; }
+.figure-editorial .frame {
+  position: relative;
+  overflow: hidden;
+  background: #EFE9DE;
+  box-shadow:
+    0 1px 0 rgba(20,34,53,0.04),
+    0 30px 70px -34px rgba(20,34,53,0.18),
+    0 2px 6px -2px rgba(20,34,53,0.05);
+}
+.figure-editorial .frame::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.04);
+  z-index: 3;
+}
+.figure-editorial .frame::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0.04;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='1'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+}
+.figure-editorial .frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.0);
+  transition: transform 1600ms cubic-bezier(0.22, 1, 0.36, 1), filter 800ms ease;
+  filter: contrast(1.025) saturate(0.97);
+}
+.figure-editorial:hover .frame img { transform: scale(1.02); }
+.figure-editorial.on-ink .frame { background: #1a2638; }
+.figure-editorial.on-ink .frame::after { box-shadow: inset 0 0 0 1px rgba(255,255,255,0.05); }
+
+.photo-warm { filter: contrast(1.025) saturate(0.97); }
+
+.paper-grain::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.022;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='1'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  mix-blend-mode: overlay;
+}
+
+/* List row hover */
+.row-hover {
+  transition: background-color 600ms cubic-bezier(0.22,1,0.36,1);
+}
+.row-hover:hover { background-color: rgba(174,209,64,0.05); }
+.row-hover.on-ink:hover { background-color: rgba(174,209,64,0.08); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .figure-editorial .frame img,
+  .link-anim, .btn, .btn-primary, .btn-text { transition: none; }
+}
