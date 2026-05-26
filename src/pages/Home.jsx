@@ -205,10 +205,6 @@ export default function Home() {
             <div className="absolute inset-0 frame">
               <img src={photos.sistemaHome} alt="Sistema ambiental complexo" />
             </div>
-            <figcaption className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 z-20 bg-copper text-paper px-6 py-3.5 rounded-md shadow-[0_18px_40px_-14px_rgba(0,0,0,0.55)] text-center whitespace-nowrap">
-              <div className="text-[10px] tracking-[0.18em] uppercase text-paper/80 mb-1">Especialidade</div>
-              <div className="text-[14px] font-semibold tracking-tight">Ciência ecológica aplicada</div>
-            </figcaption>
           </figure>
 
           <div className="lg:col-span-6 px-6 md:px-12 lg:px-20 py-24 lg:py-32 flex flex-col justify-center relative">
