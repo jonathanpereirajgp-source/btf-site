@@ -17,9 +17,9 @@ export default {
           400: '#7e8d9f',
         },
         paper: {
-          DEFAULT: '#F6F2EA',
-          warm: '#EFE9DE',
-          soft: '#FBF8F2',
+          DEFAULT: '#FFFFFF',
+          warm:    '#F7F5EF',
+          soft:    '#FAFAF7',
         },
         rule: '#1f2c3d',
         // Brand green — official BTF

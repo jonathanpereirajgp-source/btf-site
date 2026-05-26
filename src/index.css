@@ -19,13 +19,13 @@
 }
 
 html {
-  background: #F6F2EA;
+  background: #FFFFFF;
   scroll-behavior: smooth;
 }
 body {
   font-family: 'Montserrat', system-ui, sans-serif;
   color: #142235;
-  background: #F6F2EA;
+  background: #FFFFFF;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -120,15 +120,15 @@ em, .em-editorial {
 
 /* Scrollbar */
 ::-webkit-scrollbar { width: 10px; height: 10px; }
-::-webkit-scrollbar-thumb { background: #D5CDBC; border-radius: 8px; }
-::-webkit-scrollbar-track { background: #F6F2EA; }
+::-webkit-scrollbar-thumb { background: #D8D4CB; border-radius: 8px; }
+::-webkit-scrollbar-track { background: #FAFAF7; }
 
 /* ─────── Editorial imagery ─────── */
 .figure-editorial { position: relative; isolation: isolate; }
 .figure-editorial .frame {
   position: relative;
   overflow: hidden;
-  background: #EFE9DE;
+  background: #F2EFE8;
   box-shadow:
     0 1px 0 rgba(20,34,53,0.04),
     0 30px 70px -34px rgba(20,34,53,0.18),

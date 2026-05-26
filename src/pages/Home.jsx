@@ -35,11 +35,11 @@ export default function Home() {
                 variants={fadeUp}
                 initial="hidden"
                 animate="show"
-                className="display-xl font-display text-[44px] sm:text-6xl lg:text-[84px] leading-[1.06] tracking-tighter2 text-paper"
+                className="display-xl font-display text-[36px] sm:text-[48px] lg:text-[60px] leading-[1.1] tracking-tighter2 text-paper"
               >
                 <span className="block">Inteligência analítica</span>
                 <span className="block italic font-light text-paper/80 mt-1">aplicada à</span>
-                <span className="block mt-3 text-[26px] sm:text-[34px] lg:text-[44px] leading-[1.15] text-copper">
+                <span className="block mt-2 text-copper">
                   <RotatingWord
                     words={[
                       'ciência ambiental.',
