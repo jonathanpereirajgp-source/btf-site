@@ -10,7 +10,7 @@ export default function Sobre() {
   return (
     <>
       <PageHeader
-        eyebrow="— Sobre a BTF"
+        eyebrow="Sobre a BTF"
         title="Uma consultoria construída sobre método científico."
         sub="A BTF Soluções em Dados nasceu da integração entre ciência, tecnologia e inteligência analítica aplicada. Atuamos em projetos ambientais, científicos e corporativos de alta complexidade."
         mark="padronagem"
@@ -28,7 +28,7 @@ export default function Sobre() {
               </div>
             </figure>
             <div className="lg:col-span-6 lg:pt-6">
-              <p className="label mb-10">— Origem</p>
+              <p className="label mb-10">Origem</p>
               <h2 className="display-lg font-display text-3xl lg:text-[44px] leading-[1.2] tracking-tighter2 text-ink-900 max-w-[18ch]">
                 Ciência aplicada, <em className="text-ink-700">engenharia robusta</em>, decisões consistentes.
               </h2>
@@ -59,7 +59,7 @@ export default function Sobre() {
         <BrandMark kind="padronagem" tone="light" size="xl" position="centerR" style={{ opacity: 0.028 }} />
 
         <div className="wrap space-y-28 lg:space-y-36 relative">
-          <Statement label="01 — Missão">
+          <Statement label="01 / Missão">
             Transformar dados complexos em soluções inteligentes por meio da integração
             entre <em>ciência</em>, tecnologia e inteligência analítica.
           </Statement>
@@ -70,7 +70,7 @@ export default function Sobre() {
             </div>
           </figure>
 
-          <Statement label="02 — Visão">
+          <Statement label="02 / Visão">
             Ser referência em soluções analíticas e inteligência de dados aplicadas a
             projetos ambientais, científicos e corporativos de <em>alta complexidade</em>.
           </Statement>
@@ -83,7 +83,7 @@ export default function Sobre() {
 
         <div className="wrap relative">
           <div className="grid lg:grid-cols-12 gap-12 mb-20">
-            <div className="lg:col-span-3"><p className="label">— Valores</p></div>
+            <div className="lg:col-span-3"><p className="label">Valores</p></div>
             <div className="lg:col-span-9">
               <h2 className="display-lg font-display text-3xl lg:text-[52px] leading-[1.15] tracking-tighter2 text-ink-900 max-w-[20ch]">
                 Princípios que orientam <em className="text-ink-700">decisões técnicas</em>.
@@ -122,7 +122,7 @@ export default function Sobre() {
 
         <div className="wrap relative">
           <div className="grid lg:grid-cols-12 gap-12 mb-16">
-            <div className="lg:col-span-3"><p className="label label-dark">— Diferenciais</p></div>
+            <div className="lg:col-span-3"><p className="label label-dark">Diferenciais</p></div>
             <div className="lg:col-span-9">
               <h2 className="display-lg font-display text-3xl lg:text-[52px] leading-[1.15] tracking-tighter2 text-paper max-w-[24ch]">
                 O que torna o trabalho da BTF distinto.

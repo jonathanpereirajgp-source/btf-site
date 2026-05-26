@@ -9,9 +9,9 @@ export default function Especialidade() {
   return (
     <>
       <PageHeader
-        eyebrow="— Especialidade"
+        eyebrow="Especialidade"
         title="Onde a ciência ecológica encontra a engenharia de dados."
-        sub="Expertise no desenvolvimento de soluções analíticas aplicadas a sistemas ambientais complexos — com base em conhecimento ecológico, biológico e estatístico."
+        sub="Expertise no desenvolvimento de soluções analíticas aplicadas a sistemas ambientais complexos, com base em conhecimento ecológico, biológico e estatístico."
         mark="duasChaves"
         image={stock.forestFog}
       />
@@ -22,7 +22,7 @@ export default function Especialidade() {
 
         <div className="wrap relative">
           <div className="grid lg:grid-cols-12 gap-12 items-start">
-            <div className="lg:col-span-3"><p className="label">— Tese</p></div>
+            <div className="lg:col-span-3"><p className="label">Tese</p></div>
             <div className="lg:col-span-9 space-y-8 text-ink-700 text-[18px] leading-[1.75] max-w-3xl">
               <p>
                 A BTF possui expertise no desenvolvimento de soluções analíticas aplicadas a
@@ -32,7 +32,7 @@ export default function Especialidade() {
               </p>
               <p>
                 Compreendemos tanto a estrutura técnica dos dados quanto os processos
-                ambientais e ecológicos relacionados às análises — o que permite
+                ambientais e ecológicos relacionados às análises, o que permite
                 interpretações mais consistentes, modelagens mais robustas e soluções
                 analíticas mais alinhadas às demandas reais do setor ambiental.
               </p>
@@ -53,9 +53,9 @@ export default function Especialidade() {
           <div className="lg:col-span-5 px-6 md:px-12 lg:px-16 py-28 lg:py-36 flex flex-col justify-center relative">
             <BrandMark kind="padronagem" tone="light" size="lg" position="br" style={{ opacity: 0.04 }} />
 
-            <p className="label label-dark mb-10 relative">— Diferencial</p>
+            <p className="label label-dark mb-10 relative">Diferencial</p>
             <p className="relative display-lg font-display text-3xl lg:text-[44px] leading-[1.2] tracking-tighter2 text-paper max-w-[18ch]">
-              Compreendemos o <em>sistema</em> por trás do dado — não apenas a planilha.
+              Compreendemos o <em>sistema</em> por trás do dado. Não apenas a planilha.
             </p>
           </div>
         </div>
@@ -67,7 +67,7 @@ export default function Especialidade() {
 
         <div className="wrap relative">
           <div className="grid lg:grid-cols-12 gap-12 mb-16">
-            <div className="lg:col-span-3"><p className="label">— Áreas de atuação</p></div>
+            <div className="lg:col-span-3"><p className="label">Áreas de atuação</p></div>
             <div className="lg:col-span-9">
               <h2 className="display-lg font-display text-3xl lg:text-[52px] leading-[1.15] tracking-tighter2 text-ink-900 max-w-[22ch]">
                 Onde aplicamos inteligência analítica.

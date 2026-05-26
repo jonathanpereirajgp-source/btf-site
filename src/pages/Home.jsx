@@ -59,7 +59,7 @@ export default function Home() {
                 className="mt-12 text-lg lg:text-xl leading-[1.65] text-paper/70 max-w-2xl"
               >
                 Desenvolvemos soluções analíticas avançadas para projetos ambientais, científicos
-                e corporativos — integrando ciência de dados, engenharia de dados e expertise
+                e corporativos, integrando ciência de dados, engenharia de dados e expertise
                 técnica em sistemas ambientais complexos.
               </motion.p>
 
@@ -112,7 +112,7 @@ export default function Home() {
 
         <div className="wrap relative">
           <div className="grid lg:grid-cols-12 gap-12 mb-20">
-            <div className="lg:col-span-3"><p className="label">— Sobre a BTF</p></div>
+            <div className="lg:col-span-3"><p className="label">Sobre a BTF</p></div>
             <div className="lg:col-span-9">
               <h2 className="display-lg font-display text-3xl sm:text-4xl lg:text-[52px] leading-[1.18] tracking-tighter2 text-ink-900 max-w-[20ch]">
                 Nascemos da integração entre <em className="text-ink-700">ciência</em>, tecnologia e inteligência analítica.
@@ -124,7 +124,7 @@ export default function Home() {
             <div className="lg:col-span-7 grid md:grid-cols-2 gap-x-12 gap-y-7 text-ink-700 text-[17px] leading-[1.75]">
               <p>
                 Reunimos especialistas com sólida formação em Ecologia, Ciências Naturais,
-                Biologia, Estatística e Ciência de Dados — combinando conhecimento científico
+                Biologia, Estatística e Ciência de Dados, combinando conhecimento científico
                 aprofundado com expertise em automação, engenharia e análise de dados.
               </p>
               <p>
@@ -152,7 +152,7 @@ export default function Home() {
 
         <div className="wrap relative">
           <div className="grid lg:grid-cols-12 gap-12 mb-20">
-            <div className="lg:col-span-3"><p className="label label-dark">— Serviços</p></div>
+            <div className="lg:col-span-3"><p className="label label-dark">Serviços</p></div>
             <div className="lg:col-span-9">
               <h2 className="display-lg font-display text-3xl sm:text-4xl lg:text-[56px] leading-[1.15] tracking-tighter2 text-paper max-w-[20ch]">
                 Quatro pilares para transformar dados em decisões.
@@ -207,7 +207,7 @@ export default function Home() {
               <img src={stock.forestFog} alt="Floresta tropical com neblina" />
             </div>
             <figcaption className="absolute bottom-8 left-8 right-8 lg:bottom-12 lg:left-12 lg:right-12 z-10 flex justify-between text-paper/90 text-[12px] tracking-[0.04em]">
-              <span>— Especialidade</span>
+              <span>Especialidade</span>
               <span>Ciência ecológica aplicada</span>
             </figcaption>
           </figure>
@@ -215,7 +215,7 @@ export default function Home() {
           <div className="lg:col-span-6 px-6 md:px-12 lg:px-20 py-24 lg:py-32 flex flex-col justify-center relative">
             <BrandMark kind="padronagem" tone="moss" size="lg" position="br" style={{ opacity: 0.22 }} />
 
-            <p className="label mb-10 relative">— Diferencial técnico</p>
+            <p className="label mb-10 relative">Diferencial técnico</p>
             <h2 className="display-lg font-display text-3xl sm:text-4xl lg:text-[52px] leading-[1.15] tracking-tighter2 text-ink-900 max-w-[18ch] relative">
               Compreendemos o <em className="text-ink-700">sistema</em> por trás do dado.
             </h2>
@@ -232,7 +232,7 @@ export default function Home() {
 
         <div className="wrap py-24 lg:py-28 border-t border-ink-900/10">
           <div className="grid lg:grid-cols-12 gap-12">
-            <div className="lg:col-span-3"><p className="label">— Áreas</p></div>
+            <div className="lg:col-span-3"><p className="label">Áreas</p></div>
             <div className="lg:col-span-9">
               <div className="border-t border-ink-900/15">
                 {ambientalAreas.map((a, i) => (
@@ -257,7 +257,7 @@ export default function Home() {
 
         <div className="wrap relative">
           <div className="grid lg:grid-cols-12 gap-12 mb-20 items-end">
-            <div className="lg:col-span-3"><p className="label label-dark">— Trabalho</p></div>
+            <div className="lg:col-span-3"><p className="label label-dark">Trabalho</p></div>
             <div className="lg:col-span-6">
               <h2 className="display-lg font-display text-3xl sm:text-4xl lg:text-[52px] leading-[1.15] tracking-tighter2 text-paper max-w-[22ch]">
                 Projetos onde ciência e dados geram decisão.
@@ -303,7 +303,7 @@ export default function Home() {
 
         <div className="wrap relative">
           <div className="grid lg:grid-cols-12 gap-12 mb-20">
-            <div className="lg:col-span-3"><p className="label">— Time</p></div>
+            <div className="lg:col-span-3"><p className="label">Time</p></div>
             <div className="lg:col-span-9 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
               <h2 className="display-lg font-display text-3xl sm:text-4xl lg:text-[56px] leading-[1.12] tracking-tighter2 text-ink-900 max-w-[20ch]">
                 Doutorado em ciência. Fluência em método.
@@ -342,7 +342,7 @@ export default function Home() {
 
         <div className="wrap relative">
           <div className="grid lg:grid-cols-12 gap-12 mb-16">
-            <div className="lg:col-span-3"><p className="label label-dark">— Diferenciais</p></div>
+            <div className="lg:col-span-3"><p className="label label-dark">Diferenciais</p></div>
             <div className="lg:col-span-9">
               <h2 className="display-lg font-display text-3xl sm:text-4xl lg:text-[52px] leading-[1.15] tracking-tighter2 text-paper max-w-[24ch]">
                 Por que consultorias e empresas científicas escolhem a BTF.
@@ -361,7 +361,7 @@ export default function Home() {
           </ul>
 
           <div className="grid lg:grid-cols-12 gap-12 pt-20 border-t border-paper/15">
-            <div className="lg:col-span-3"><p className="label label-dark">— Parceiros</p></div>
+            <div className="lg:col-span-3"><p className="label label-dark">Parceiros</p></div>
             <div className="lg:col-span-9">
               <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-4">
                 {partners.map((p) => (

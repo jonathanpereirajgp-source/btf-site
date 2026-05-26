@@ -5,7 +5,7 @@ export default function NotFound() {
   return (
     <section className="min-h-screen flex items-center justify-center bg-paper text-ink-900">
       <div className="wrap text-center max-w-xl">
-        <p className="label justify-center mb-8">— Erro 404</p>
+        <p className="label justify-center mb-8">Erro 404</p>
         <h1 className="font-display text-5xl md:text-7xl leading-[1.05] tracking-tighter2 mb-6">
           Página não encontrada.
         </h1>

@@ -19,9 +19,9 @@ export default function Portfolio() {
   return (
     <>
       <PageHeader
-        eyebrow="— Portfólio"
+        eyebrow="Portfólio"
         title="Soluções que viraram inteligência operacional."
-        sub="Atuamos com empresas e consultorias ambientais, científicas e tecnológicas — estruturando dados, automatizando fluxos e gerando insights orientados à decisão."
+        sub="Atuamos com empresas e consultorias ambientais, científicas e tecnológicas, estruturando dados, automatizando fluxos e gerando insights orientados à decisão."
         mark="padronagem"
       />
 
@@ -31,7 +31,7 @@ export default function Portfolio() {
 
         <div className="wrap relative">
           <div className="grid lg:grid-cols-12 gap-12">
-            <div className="lg:col-span-3"><p className="label">— Parceiros</p></div>
+            <div className="lg:col-span-3"><p className="label">Parceiros</p></div>
             <div className="lg:col-span-9">
               <h2 className="display-lg font-display text-2xl lg:text-[36px] leading-[1.25] tracking-tighter2 text-ink-900 mb-12 max-w-2xl">
                 Organizações com as quais já colaboramos.
@@ -59,7 +59,7 @@ export default function Portfolio() {
 
         <div className="wrap relative">
           <div className="grid lg:grid-cols-12 gap-12 mb-20">
-            <div className="lg:col-span-3"><p className="label label-dark">— Projetos</p></div>
+            <div className="lg:col-span-3"><p className="label label-dark">Projetos</p></div>
             <div className="lg:col-span-9">
               <h2 className="display-lg font-display text-3xl lg:text-[56px] leading-[1.15] tracking-tighter2 text-paper max-w-[18ch]">
                 Tipos de projetos que desenvolvemos.

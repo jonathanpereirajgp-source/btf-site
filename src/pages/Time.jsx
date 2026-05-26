@@ -10,7 +10,7 @@ export default function Time() {
   return (
     <>
       <PageHeader
-        eyebrow="— Time"
+        eyebrow="Time"
         title="Doutorado em ciência. Fluência em método."
         sub="Um time multidisciplinar que combina formação acadêmica de alto nível com prática técnica em engenharia e ciência de dados."
         mark="duasChaves"
@@ -74,7 +74,7 @@ export default function Time() {
 
                 <div className="lg:col-span-7 lg:pt-8">
                   <p className={`label ${isDark ? 'label-dark' : ''} mb-8`}>
-                    <span className="num-tag">/{String(i + 1).padStart(2, '0')}</span> — Sócio·a fundador·a
+                    <span className="num-tag">/{String(i + 1).padStart(2, '0')}</span> · Sócio·a fundador·a
                   </p>
                   <h2 className={`display-xl font-display text-4xl lg:text-[72px] leading-[1.05] tracking-tighter2 ${isDark ? 'text-paper' : 'text-ink-900'}`}>
                     {m.name}

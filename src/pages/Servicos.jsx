@@ -27,7 +27,7 @@ export default function Servicos() {
   return (
     <>
       <PageHeader
-        eyebrow="— Serviços"
+        eyebrow="Serviços"
         title="Do dado bruto à decisão estratégica."
         sub="Trabalhamos próximos ao cliente para compreender desafios específicos e desenvolver soluções orientadas às necessidades reais de cada projeto."
         mark="chave"
@@ -83,7 +83,7 @@ export default function Servicos() {
               <div className="grid lg:grid-cols-12 gap-12 mb-16">
                 <div className="lg:col-span-3">
                   <p className={`label ${isDark ? 'label-dark' : ''}`}>
-                    — {String(i + 1).padStart(2, '0')} / Serviço
+                    <span className="num-tag">/{String(i + 1).padStart(2, '0')}</span> · Serviço
                   </p>
                 </div>
                 <div className="lg:col-span-9">
@@ -105,7 +105,7 @@ export default function Servicos() {
                   </p>
 
                   <div className={`mt-14 border-t ${isDark ? 'border-paper/15' : 'border-ink-900/15'}`}>
-                    <p className={`label ${isDark ? 'label-dark' : ''} py-7`}>— Inclui</p>
+                    <p className={`label ${isDark ? 'label-dark' : ''} py-7`}>Inclui</p>
                     <ul>
                       {s.items.map((it, idx) => (
                         <li
@@ -142,7 +142,7 @@ export default function Servicos() {
 
         <div className="wrap relative">
           <div className="grid lg:grid-cols-12 gap-12 mb-12">
-            <div className="lg:col-span-3"><p className="label">— Stack</p></div>
+            <div className="lg:col-span-3"><p className="label">Stack</p></div>
             <div className="lg:col-span-9">
               <h2 className="display-lg font-display text-3xl lg:text-[44px] leading-[1.2] tracking-tighter2 text-ink-900 max-w-[24ch]">
                 Tecnologias maduras, escolhidas pela fidelidade ao método.

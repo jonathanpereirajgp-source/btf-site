@@ -40,7 +40,7 @@ export default function Navbar() {
           scrolled ? 'h-[68px]' : 'h-20'
         }`}
       >
-        <Link to="/" className="flex items-center group" aria-label="BTF Soluções em Dados — Início">
+        <Link to="/" className="flex items-center group" aria-label="BTF Soluções em Dados · Início">
           <img
             src="/brand/logo-extensa-verde.svg"
             alt="BTF Soluções em Dados"

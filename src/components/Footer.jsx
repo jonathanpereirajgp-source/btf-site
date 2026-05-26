@@ -8,7 +8,7 @@ export default function Footer() {
         {/* Closing statement */}
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 pb-24 border-b border-paper/10">
           <div className="lg:col-span-7">
-            <p className="label label-dark mb-10">— Próximo passo</p>
+            <p className="label label-dark mb-10">Próximo passo</p>
             <h2 className="font-display text-[36px] sm:text-5xl lg:text-[64px] leading-[1.12] tracking-tighter2 text-paper max-w-[18ch]">
               Trabalhamos próximos ao cliente para entender o problema antes de propor uma solução.
             </h2>
@@ -33,7 +33,7 @@ export default function Footer() {
           </div>
 
           <div className="md:col-span-3">
-            <p className="label label-dark mb-6">— Navegação</p>
+            <p className="label label-dark mb-6">Navegação</p>
             <ul className="space-y-3 text-paper/80 text-[15px]">
               <li><Link to="/sobre" className="link-anim hover:text-paper">Sobre</Link></li>
               <li><Link to="/servicos" className="link-anim hover:text-paper">Serviços</Link></li>
@@ -45,7 +45,7 @@ export default function Footer() {
           </div>
 
           <div className="md:col-span-4">
-            <p className="label label-dark mb-6">— Contato</p>
+            <p className="label label-dark mb-6">Contato</p>
             <ul className="space-y-3 text-paper/80 text-[15px]">
               <li>
                 <a href="mailto:contato@btfdados.com.br" className="link-anim hover:text-paper">
@@ -53,10 +53,10 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#" className="link-anim hover:text-paper">LinkedIn — /company/btf-dados</a>
+                <a href="#" className="link-anim hover:text-paper">LinkedIn · /company/btf-dados</a>
               </li>
               <li>
-                <a href="#" className="link-anim hover:text-paper">Instagram — @btf.dados</a>
+                <a href="#" className="link-anim hover:text-paper">Instagram · @btf.dados</a>
               </li>
             </ul>
           </div>

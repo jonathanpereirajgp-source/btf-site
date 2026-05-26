@@ -19,7 +19,7 @@ export default function Contato() {
   return (
     <>
       <PageHeader
-        eyebrow="— Contato"
+        eyebrow="Contato"
         title="Conte sobre o seu projeto."
         sub="Nosso time retorna em até dois dias úteis com uma proposta técnica orientada às necessidades reais do seu desafio."
         mark="padronagem"
@@ -32,7 +32,7 @@ export default function Contato() {
         <div className="wrap relative">
           <div className="grid lg:grid-cols-12 gap-14 lg:gap-20">
             <div className="lg:col-span-4">
-              <p className="label label-dark mb-10">— Canais diretos</p>
+              <p className="label label-dark mb-10">Canais diretos</p>
               <ul className="space-y-8">
                 <ChannelItem label="E-mail" value="contato@btfdados.com.br" href="mailto:contato@btfdados.com.br" />
                 <ChannelItem label="LinkedIn" value="/company/btf-dados" href="#" />
@@ -40,7 +40,7 @@ export default function Contato() {
               </ul>
 
               <div className="mt-14 pt-10 border-t border-paper/15">
-                <p className="label label-dark mb-6">— Áreas de interesse</p>
+                <p className="label label-dark mb-6">Áreas de interesse</p>
                 <ul className="space-y-2.5 text-paper/75 text-[15px] leading-[1.55]">
                   <li>· Ciência de Dados</li>
                   <li>· Engenharia de Dados</li>
