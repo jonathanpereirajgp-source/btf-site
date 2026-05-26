@@ -14,6 +14,7 @@ export default function Especialidade() {
         sub="Expertise no desenvolvimento de soluções analíticas aplicadas a sistemas ambientais complexos, com base em conhecimento ecológico, biológico e estatístico."
         mark="duasChaves"
         image={photos.especialidadeHero}
+        imageClassName="object-[50%_88%]"
       />
 
       {/* Tese — LIGHT */}

@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import BrandMark from './BrandMark.jsx'
 
-export default function PageHeader({ eyebrow, title, sub, image, mark = 'padronagem' }) {
+export default function PageHeader({ eyebrow, title, sub, image, imageClassName = '', mark = 'padronagem' }) {
   return (
     <header className="relative bg-ink-900 text-paper paper-grain overflow-hidden pt-36 pb-24 lg:pt-44 lg:pb-32">
       <BrandMark kind={mark} tone="light" size="lg" position="r" style={{ opacity: 0.03 }} />
@@ -42,7 +42,7 @@ export default function PageHeader({ eyebrow, title, sub, image, mark = 'padrona
             className="mt-20 lg:mt-28 figure-editorial on-ink"
           >
             <div className="aspect-[21/9] frame">
-              <img src={image} alt="" />
+              <img src={image} alt="" className={imageClassName} />
             </div>
           </motion.figure>
         )}
