@@ -86,7 +86,7 @@ export default function Home() {
               className="lg:col-span-5 figure-editorial on-ink"
             >
               <div className="aspect-[4/5] frame">
-                <img src="/team/equipe-trio.jpg" alt="Fundadores BTF" className="object-[50%_55%]" />
+                <img src="/team/equipe-trio.jpg" alt="Fundadores BTF" className="object-[50%_72%]" />
               </div>
               <figcaption className="mt-5 flex justify-between items-baseline text-[12px] text-paper/55">
                 <span>Fundadores BTF Soluções em Dados</span>
@@ -170,7 +170,7 @@ export default function Home() {
                 transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
                 className="row-hover on-ink grid lg:grid-cols-12 gap-8 py-12 lg:py-16 border-b border-paper/15 group cursor-default"
               >
-                <div className="lg:col-span-1 text-paper/40 text-[13px] tracking-tight pt-3 transition-colors duration-500 group-hover:text-paper/70">
+                <div className="lg:col-span-1 num-tag text-[13px] tracking-tight pt-3 transition-colors duration-500 group-hover:text-paper/70">
                   /{String(i + 1).padStart(2, '0')}
                 </div>
                 <div className="lg:col-span-5">
@@ -237,7 +237,7 @@ export default function Home() {
               <div className="border-t border-ink-900/15">
                 {ambientalAreas.map((a, i) => (
                   <div key={a} className="row-hover grid grid-cols-12 gap-4 py-6 border-b border-ink-900/15 items-baseline group">
-                    <span className="col-span-2 lg:col-span-1 text-ink-500 text-[12px] tracking-tight">
+                    <span className="col-span-2 lg:col-span-1 num-tag text-[12px] tracking-tight">
                       /{String(i + 1).padStart(2, '0')}
                     </span>
                     <span className="col-span-10 lg:col-span-11 font-display text-xl lg:text-[28px] leading-[1.3] tracking-tighter2 text-ink-900 transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-1">
@@ -287,7 +287,9 @@ export default function Home() {
                     <img src={c.img} alt={c.title} />
                   </div>
                 </figure>
-                <div className="text-[11px] tracking-[0.18em] uppercase text-paper/55 mb-3">/{String(i + 1).padStart(2, '0')} · {c.tag}</div>
+                <div className="text-[11px] tracking-[0.18em] uppercase text-paper/55 mb-3">
+                  <span className="num-tag">/{String(i + 1).padStart(2, '0')}</span> · {c.tag}
+                </div>
                 <h3 className="font-display text-xl lg:text-[24px] leading-[1.25] tracking-tighter2 text-paper">{c.title}</h3>
               </motion.article>
             ))}
@@ -350,7 +352,7 @@ export default function Home() {
           <ul className="grid sm:grid-cols-2 gap-x-14 max-w-5xl ml-auto mb-24">
             {differentiators.map((d, i) => (
               <li key={d} className="flex gap-5 items-baseline border-t border-paper/15 py-5">
-                <span className="text-paper/40 text-[12px] tracking-tight w-10 shrink-0">
+                <span className="num-tag text-[12px] tracking-tight w-10 shrink-0">
                   /{String(i + 1).padStart(2, '0')}
                 </span>
                 <span className="text-paper/85 text-[16px] leading-[1.55]">{d}</span>
@@ -377,7 +379,7 @@ export default function Home() {
 function Fact({ n, t, d, dark }) {
   return (
     <div>
-      <div className={`text-[12px] tracking-tight mb-4 ${dark ? 'text-paper/45' : 'text-ink-500'}`}>/{n}</div>
+      <div className="num-tag text-[12px] tracking-tight mb-4">/{n}</div>
       <div className={`font-display text-2xl lg:text-[26px] leading-[1.2] tracking-tighter2 mb-3 ${dark ? 'text-paper' : 'text-ink-900'}`}>{t}</div>
       <div className={`text-[15px] leading-[1.65] ${dark ? 'text-paper/65' : 'text-ink-600'}`}>{d}</div>
     </div>

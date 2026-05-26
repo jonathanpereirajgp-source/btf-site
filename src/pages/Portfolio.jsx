@@ -39,7 +39,7 @@ export default function Portfolio() {
               <div className="border-t border-ink-900/15">
                 {partners.map((p, i) => (
                   <div key={p} className="row-hover grid grid-cols-12 gap-4 py-6 border-b border-ink-900/15 items-baseline group">
-                    <span className="col-span-2 lg:col-span-1 text-ink-500 text-[13px] tracking-tight">
+                    <span className="col-span-2 lg:col-span-1 num-tag text-[13px] tracking-tight">
                       /{String(i + 1).padStart(2, '0')}
                     </span>
                     <span className="col-span-10 lg:col-span-11 font-display text-xl lg:text-[28px] leading-[1.2] tracking-tighter2 text-ink-900 transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-1">
@@ -83,7 +83,7 @@ export default function Portfolio() {
                   </div>
                 </figure>
                 <div className="flex items-center justify-between text-[11px] tracking-[0.18em] uppercase text-paper/55 mb-4">
-                  <span>/{String(i + 1).padStart(2, '0')} · {c.client}</span>
+                  <span><span className="num-tag">/{String(i + 1).padStart(2, '0')}</span> · {c.client}</span>
                 </div>
                 <h3 className="font-display text-2xl lg:text-[36px] leading-[1.18] tracking-tighter2 text-paper">
                   {c.title}

@@ -78,7 +78,7 @@ export default function Especialidade() {
           <div className="border-t border-ink-900/15">
             {ambientalAreas.map((a, i) => (
               <div key={a} className="row-hover grid grid-cols-12 gap-4 py-8 border-b border-ink-900/15 items-baseline group">
-                <span className="col-span-2 lg:col-span-1 text-ink-500 text-[13px] tracking-tight">
+                <span className="col-span-2 lg:col-span-1 num-tag text-[13px] tracking-tight">
                   /{String(i + 1).padStart(2, '0')}
                 </span>
                 <span className="col-span-10 lg:col-span-11 font-display text-2xl lg:text-[36px] leading-[1.25] tracking-tighter2 text-ink-900 transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-1.5">

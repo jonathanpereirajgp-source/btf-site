@@ -43,7 +43,7 @@ export default function Servicos() {
                 href={`#${s.slug}`}
                 className="row-hover group grid lg:grid-cols-12 gap-6 py-7 border-b border-ink-900/15 items-baseline"
               >
-                <span className="lg:col-span-1 text-ink-500 text-[13px] tracking-tight">/{String(i + 1).padStart(2, '0')}</span>
+                <span className="lg:col-span-1 num-tag text-[13px] tracking-tight">/{String(i + 1).padStart(2, '0')}</span>
                 <span className="lg:col-span-5 font-display text-2xl lg:text-[34px] leading-[1.2] tracking-tighter2 text-ink-900 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-1.5">
                   {s.title}
                 </span>
@@ -112,7 +112,7 @@ export default function Servicos() {
                           key={it}
                           className={`flex items-baseline gap-6 py-4 border-t ${isDark ? 'border-paper/15' : 'border-ink-900/15'}`}
                         >
-                          <span className={`text-[12px] tracking-tight w-10 ${isDark ? 'text-paper/40' : 'text-ink-500'}`}>
+                          <span className="num-tag text-[12px] tracking-tight w-10">
                             /{String(idx + 1).padStart(2, '0')}
                           </span>
                           <span className={`font-display text-lg lg:text-[22px] leading-[1.3] ${isDark ? 'text-paper' : 'text-ink-900'}`}>{it}</span>
@@ -153,7 +153,7 @@ export default function Servicos() {
             <div className="lg:col-span-9 lg:col-start-4 flex flex-wrap gap-x-8 gap-y-4 text-[17px] text-ink-700 leading-snug">
               {stack.map((t, i) => (
                 <span key={t} className="flex items-center gap-3">
-                  <span className="text-[12px] text-ink-400">/{String(i + 1).padStart(2, '0')}</span>
+                  <span className="num-tag text-[12px]">/{String(i + 1).padStart(2, '0')}</span>
                   {t}
                 </span>
               ))}

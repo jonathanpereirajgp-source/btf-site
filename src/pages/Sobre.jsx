@@ -101,7 +101,7 @@ export default function Sobre() {
                 transition={{ duration: 0.6, delay: i * 0.04, ease: [0.22, 1, 0.36, 1] }}
                 className="row-hover grid grid-cols-12 gap-4 py-7 border-t border-ink-900/15 group"
               >
-                <span className="col-span-2 text-ink-500 text-[12px] tracking-tight pt-1.5">
+                <span className="col-span-2 num-tag text-[12px] tracking-tight pt-1.5">
                   /{String(i + 1).padStart(2, '0')}
                 </span>
                 <div className="col-span-10">
@@ -132,7 +132,7 @@ export default function Sobre() {
           <ul className="grid sm:grid-cols-2 gap-x-14 max-w-5xl ml-auto">
             {differentiators.map((d, i) => (
               <li key={d} className="flex gap-5 items-baseline border-t border-paper/15 py-5">
-                <span className="text-paper/40 text-[12px] tracking-tight w-10 shrink-0">
+                <span className="num-tag text-[12px] tracking-tight w-10 shrink-0">
                   /{String(i + 1).padStart(2, '0')}
                 </span>
                 <span className="text-paper/85 text-[16px] leading-[1.55]">{d}</span>

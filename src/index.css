@@ -44,9 +44,13 @@ h1, h2, h3, h4 {
 em, .em-editorial {
   font-style: italic;
   font-family: 'Fraunces', Georgia, serif;
-  font-weight: 300;
+  font-weight: 400;
   font-variation-settings: "opsz" 144, "SOFT" 100;
+  color: #AED140;
 }
+
+/* Numerator tags used across the site (/01, /02, etc.) */
+.num-tag { color: #F04F27; }
 
 @layer components {
   .wrap { @apply max-w-[1280px] mx-auto px-6 md:px-10 lg:px-14; }
