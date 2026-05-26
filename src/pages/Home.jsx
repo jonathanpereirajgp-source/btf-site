@@ -87,7 +87,7 @@ export default function Home() {
             >
               <div className="aspect-[4/5] frame">
                 <img src="/team/equipe-trio.jpg" alt="Fundadores BTF" className="object-[50%_72%]" />
-                <figcaption className="absolute bottom-5 left-5 z-20 bg-moss-deep text-paper px-3.5 py-1.5 rounded-md shadow-[0_8px_20px_-10px_rgba(0,0,0,0.4)]">
+                <figcaption className="absolute bottom-5 left-5 z-20 bg-moss-deep text-paper px-3.5 py-[3px] rounded-md shadow-[0_8px_20px_-10px_rgba(0,0,0,0.4)] text-center leading-snug">
                   <span className="text-[10.5px] font-normal tracking-tight">Fundadores BTF Soluções em Dados</span>
                 </figcaption>
               </div>
@@ -205,7 +205,7 @@ export default function Home() {
             <div className="absolute inset-0 frame">
               <img src={photos.sistemaHome} alt="Sistema ambiental complexo" />
             </div>
-            <figcaption className="absolute bottom-0 left-8 lg:left-14 translate-y-1/2 z-20 bg-copper text-paper px-5 py-3.5 rounded-md shadow-[0_18px_40px_-14px_rgba(0,0,0,0.55)]">
+            <figcaption className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 z-20 bg-copper text-paper px-6 py-3.5 rounded-md shadow-[0_18px_40px_-14px_rgba(0,0,0,0.55)] text-center whitespace-nowrap">
               <div className="text-[10px] tracking-[0.18em] uppercase text-paper/80 mb-1">Especialidade</div>
               <div className="text-[14px] font-semibold tracking-tight">Ciência ecológica aplicada</div>
             </figcaption>
