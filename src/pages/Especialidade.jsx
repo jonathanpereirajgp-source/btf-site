@@ -3,7 +3,7 @@ import { ArrowRight } from 'lucide-react'
 import PageHeader from '../components/PageHeader.jsx'
 import { Section } from '../components/Section.jsx'
 import BrandMark from '../components/BrandMark.jsx'
-import { ambientalAreas, stock } from '../data/site.js'
+import { ambientalAreas, stock, photos } from '../data/site.js'
 
 export default function Especialidade() {
   return (
@@ -13,7 +13,7 @@ export default function Especialidade() {
         title="Onde a ciência ecológica encontra a engenharia de dados."
         sub="Expertise no desenvolvimento de soluções analíticas aplicadas a sistemas ambientais complexos, com base em conhecimento ecológico, biológico e estatístico."
         mark="duasChaves"
-        image={stock.forestFog}
+        image={photos.especialidadeHero}
       />
 
       {/* Tese — LIGHT */}
@@ -46,7 +46,7 @@ export default function Especialidade() {
         <div className="grid lg:grid-cols-12 min-h-[640px]">
           <figure className="lg:col-span-7 relative figure-editorial on-ink">
             <div className="absolute inset-0 frame">
-              <img src={stock.waterReflection} alt="Sistemas biológicos complexos" />
+              <img src={photos.sistemaEspecialidade} alt="Sistemas ambientais complexos" />
             </div>
             <div className="absolute inset-0 bg-ink-900/30 z-[1]" />
           </figure>

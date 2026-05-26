@@ -1,6 +1,14 @@
 // Single source of truth for services, team, portfolio etc. (from BTF docs)
 
-// Stock editorial imagery — replace with proprietary photography when available.
+// Proprietary BTF photography (tratada para web — editorial)
+export const photos = {
+  sistemaHome:           '/photos/sistema-home.jpg',           // Home — pull quote "Compreendemos o sistema"
+  engenhariaDeDados:     '/photos/engenharia-de-dados.jpg',    // Serviços — Engenharia de Dados
+  sistemaEspecialidade:  '/photos/sistema-especialidade.jpg',  // Especialidade — pull quote
+  especialidadeHero:     '/photos/especialidade-hero.jpg',     // Especialidade — header
+}
+
+// Stock editorial imagery (fallback / outros usos).
 export const stock = {
   forestRoad:    'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1600&q=80',
   forestFog:     'https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&w=1600&q=80',

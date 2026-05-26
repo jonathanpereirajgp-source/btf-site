@@ -5,13 +5,14 @@ import { ArrowRight, ArrowUpRight } from 'lucide-react'
 import PageHeader from '../components/PageHeader.jsx'
 import { Section } from '../components/Section.jsx'
 import BrandMark from '../components/BrandMark.jsx'
-import { services, stack, stock } from '../data/site.js'
+import { services, stack, stock, photos } from '../data/site.js'
 
+// Resolve image source per service. Custom BTF photo for Engenharia de Dados; stock otherwise.
 const serviceImage = {
-  'ciencia-de-dados':    'chartsLaptop',
-  'engenharia-de-dados': 'topoMap',
-  'dashboards-bi':       'notebookData',
-  'automacao':           'labNotebook',
+  'ciencia-de-dados':    stock.chartsLaptop,
+  'engenharia-de-dados': photos.engenhariaDeDados,
+  'dashboards-bi':       stock.notebookData,
+  'automacao':           stock.labNotebook,
 }
 
 export default function Servicos() {
@@ -60,7 +61,7 @@ export default function Servicos() {
       {/* Each service — alternating */}
       {services.map((s, i) => {
         const isDark = i % 2 === 0
-        const imgKey = serviceImage[s.slug] || 'forestCanopy'
+        const imgSrc = serviceImage[s.slug] || stock.forestCanopy
         return (
           <Section
             key={s.slug}
@@ -96,7 +97,7 @@ export default function Servicos() {
               <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
                 <figure className={`lg:col-span-5 figure-editorial ${isDark ? 'on-ink' : ''}`}>
                   <div className="aspect-[4/5] frame">
-                    <img src={stock[imgKey]} alt={s.title} />
+                    <img src={imgSrc} alt={s.title} />
                   </div>
                 </figure>
                 <div className="lg:col-span-7 lg:pt-2">

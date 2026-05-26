@@ -4,7 +4,7 @@ import { ArrowUpRight, ArrowRight } from 'lucide-react'
 import { Section } from '../components/Section.jsx'
 import BrandMark from '../components/BrandMark.jsx'
 import RotatingWord from '../components/RotatingWord.jsx'
-import { services, partners, team, differentiators, ambientalAreas, stock } from '../data/site.js'
+import { services, partners, team, differentiators, ambientalAreas, stock, photos } from '../data/site.js'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -204,7 +204,7 @@ export default function Home() {
         <div className="grid lg:grid-cols-12 min-h-[640px]">
           <figure className="lg:col-span-6 relative figure-editorial">
             <div className="absolute inset-0 frame">
-              <img src={stock.forestFog} alt="Floresta tropical com neblina" />
+              <img src={photos.sistemaHome} alt="Sistema ambiental complexo" />
             </div>
             <figcaption className="absolute bottom-8 left-8 right-8 lg:bottom-12 lg:left-12 lg:right-12 z-10 flex justify-between text-paper/90 text-[12px] tracking-[0.04em]">
               <span>Especialidade</span>
