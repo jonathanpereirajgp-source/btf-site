@@ -71,9 +71,10 @@ em, .em-editorial {
     @apply btn bg-moss text-ink-900;
   }
   .btn-primary:hover {
-    background-color: var(--c-moss-dark);
+    background-color: #F04F27;
+    color: #FFFFFF;
     transform: translateY(-1px);
-    box-shadow: 0 14px 36px -16px rgba(174, 209, 64, 0.55);
+    box-shadow: 0 14px 36px -16px rgba(240, 79, 39, 0.55);
   }
 
   /* Solid dark (used on light sections where green wouldn't read well) */
@@ -85,7 +86,12 @@ em, .em-editorial {
     @apply btn border border-ink-900/30 text-ink-900 hover:bg-ink-900 hover:text-paper hover:border-ink-900;
   }
   .btn-outline-dark {
-    @apply btn border border-paper/30 text-paper hover:bg-paper hover:text-ink-900 hover:border-paper;
+    @apply btn border border-paper/30 text-paper;
+  }
+  .btn-outline-dark:hover {
+    background-color: #F04F27;
+    color: #FFFFFF;
+    border-color: #F04F27;
   }
 
   .btn-text {
