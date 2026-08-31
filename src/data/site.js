@@ -6,6 +6,9 @@ export const photos = {
   engenhariaDeDados:     '/photos/engenharia-de-dados.jpg',    // Serviços — Engenharia de Dados
   sistemaEspecialidade:  '/photos/sistema-especialidade.jpg',  // Especialidade — pull quote
   especialidadeHero:     '/photos/especialidade-hero.jpg',     // Especialidade — header
+  cienciaDeDados:        '/photos/ciencia-de-dados.jpg',       // Home — preview portfólio /03 Ciência de Dados
+  dashboardMonitoramento:'/photos/dashboard-monitoramento.jpg',// Portfólio — case Dashboard de monitoramento ambiental
+  modelagemEcologica:    '/photos/modelagem-ecologica.jpg',   // Portfólio — case Modelagem ecológica preditiva
 }
 
 // Stock editorial imagery (fallback / outros usos).
@@ -115,6 +118,7 @@ export const team = [
     role: 'Bióloga · Cientista e Analista de Dados',
     title: 'Doutora em Ecologia',
     photo: '/team/thaise.jpg',
+    imgPos: 'object-top', // cabeça no topo da foto — alinha ao topo p/ não cortar
     bio: 'Experiência em gestão de dados e metadados, modelagem estatística, automação analítica e desenvolvimento de relatórios técnicos. Atua na organização e estruturação de processos analíticos orientados por dados.',
     tags: ['Metadados', 'Modelagem', 'Relatórios', 'Estruturação'],
   },

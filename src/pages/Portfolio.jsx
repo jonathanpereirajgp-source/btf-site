@@ -4,12 +4,12 @@ import { ArrowRight } from 'lucide-react'
 import PageHeader from '../components/PageHeader.jsx'
 import { Section } from '../components/Section.jsx'
 import BrandMark from '../components/BrandMark.jsx'
-import { portfolioCases, partners, stock } from '../data/site.js'
+import { portfolioCases, partners, stock, photos } from '../data/site.js'
 
 const caseImage = [
-  stock.notebookData,
+  photos.dashboardMonitoramento,
   stock.topoMap,
-  stock.chartsLaptop,
+  photos.modelagemEcologica,
   stock.labNotebook,
   stock.forestRiver,
   stock.scienceField,

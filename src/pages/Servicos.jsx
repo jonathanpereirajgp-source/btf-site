@@ -9,7 +9,7 @@ import { services, stack, stock, photos } from '../data/site.js'
 
 // Resolve image source per service. Custom BTF photo for Engenharia de Dados; stock otherwise.
 const serviceImage = {
-  'ciencia-de-dados':    stock.chartsLaptop,
+  'ciencia-de-dados':    photos.cienciaDeDados,
   'engenharia-de-dados': photos.engenhariaDeDados,
   'dashboards-bi':       stock.notebookData,
   'automacao':           stock.labNotebook,

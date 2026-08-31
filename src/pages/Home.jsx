@@ -267,7 +267,7 @@ export default function Home() {
             {[
               { img: stock.notebookData, tag: 'Dashboards & BI', title: 'Monitoramento ambiental em tempo real' },
               { img: stock.topoMap,      tag: 'Engenharia de Dados', title: 'Pipeline integrado de dados de campo' },
-              { img: stock.chartsLaptop, tag: 'Ciência de Dados', title: 'Modelagem ecológica preditiva' },
+              { img: photos.cienciaDeDados, tag: 'Ciência de Dados', title: 'Modelagem ecológica preditiva' },
             ].map((c, i) => (
               <motion.article
                 key={c.title}
@@ -317,8 +317,8 @@ export default function Home() {
                 transition={{ duration: 0.8, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
                 className="figure-editorial group"
               >
-                <div className="aspect-[4/5] frame">
-                  <img src={m.photo} alt={m.name} />
+                <div className="aspect-[2/3] frame">
+                  <img src={m.photo} alt={m.name} className={m.imgPos} />
                 </div>
                 <figcaption className="pt-6">
                   <div className="text-[11px] tracking-[0.18em] uppercase text-ink-500 mb-2.5">{m.title}</div>

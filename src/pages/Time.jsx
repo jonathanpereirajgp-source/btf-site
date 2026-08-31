@@ -68,7 +68,7 @@ export default function Time() {
               >
                 <figure className={`lg:col-span-5 figure-editorial ${isDark ? 'on-ink' : ''}`}>
                   <div className="aspect-[4/5] frame">
-                    <img src={m.photo} alt={m.name} />
+                    <img src={m.photo} alt={m.name} className={m.imgPos} />
                   </div>
                 </figure>
 
