@@ -3,7 +3,7 @@ import { ArrowRight } from 'lucide-react'
 import PageHeader from '../components/PageHeader.jsx'
 import { Section } from '../components/Section.jsx'
 import BrandMark from '../components/BrandMark.jsx'
-import { ambientalAreas, stock, photos } from '../data/site.js'
+import { ambientalAreas, photos } from '../data/site.js'
 
 export default function Especialidade() {
   return (

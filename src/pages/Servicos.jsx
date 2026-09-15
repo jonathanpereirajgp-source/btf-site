@@ -30,7 +30,7 @@ export default function Servicos() {
       <PageHeader
         eyebrow="Serviços"
         title="Do dado bruto à decisão estratégica."
-        sub="Trabalhamos próximos ao cliente para compreender desafios específicos e desenvolver soluções orientadas às necessidades reais de cada projeto."
+        sub="Trabalhamos lado a lado com nossos clientes, mergulhando no contexto e compreendendo a fundo cada desafio antes de propor qualquer solução."
         mark="chave"
       />
 
@@ -145,9 +145,13 @@ export default function Servicos() {
           <div className="grid lg:grid-cols-12 gap-12 mb-12">
             <div className="lg:col-span-3"><p className="label">Stack</p></div>
             <div className="lg:col-span-9">
-              <h2 className="display-lg font-display text-3xl lg:text-[44px] leading-[1.2] tracking-tighter2 text-ink-900 max-w-[24ch]">
-                Tecnologias maduras, escolhidas pela fidelidade ao método.
+              <h2 className="font-display text-3xl lg:text-[44px] leading-[1.2] tracking-tighter2 text-ink-900 max-w-[24ch]">
+                Tecnologias que sustentam <em className="text-ink-700">nossas soluções</em>.
               </h2>
+              <p className="mt-8 text-ink-700 text-[17px] leading-[1.75] max-w-2xl">
+                Utilizamos ferramentas maduras e reconhecidas, escolhidas pela fidelidade ao método
+                científico e pela confiabilidade em ambientes de alta complexidade.
+              </p>
             </div>
           </div>
           <div className="grid lg:grid-cols-12 gap-12">

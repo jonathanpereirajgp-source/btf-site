@@ -3,8 +3,10 @@ import { motion } from 'framer-motion'
 import { ArrowUpRight, ArrowRight } from 'lucide-react'
 import { Section } from '../components/Section.jsx'
 import BrandMark from '../components/BrandMark.jsx'
-import RotatingWord from '../components/RotatingWord.jsx'
-import { services, partners, team, differentiators, ambientalAreas, stock, photos } from '../data/site.js'
+import {
+  services, partners, team, differentiators, ambientalAreas,
+  photos, homeHero, homeFacts,
+} from '../data/site.js'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -14,13 +16,13 @@ const fadeUp = {
 export default function Home() {
   return (
     <>
-      {/* ─────────────── HERO — DARK ─────────────── */}
+      {/* HERO DARK */}
       <section className="relative bg-ink-900 text-paper paper-grain overflow-hidden">
         <BrandMark kind="padronagem" tone="light" size="xxl" position="r" style={{ opacity: 0.028 }} />
         <BrandMark kind="icon" tone="light" size="md" position="bl" style={{ opacity: 0.03, transform: 'rotate(-15deg) translate(-25%, 25%)' }} />
 
         <div className="wrap pt-36 pb-24 lg:pt-44 lg:pb-32 relative">
-          <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-end">
+          <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             <div className="lg:col-span-7">
               <motion.p
                 initial={{ opacity: 0 }}
@@ -35,20 +37,9 @@ export default function Home() {
                 variants={fadeUp}
                 initial="hidden"
                 animate="show"
-                className="display-xl font-display text-[36px] sm:text-[48px] lg:text-[60px] leading-[1.1] tracking-tighter2 text-paper"
+                className="font-display text-[36px] sm:text-[48px] lg:text-[60px] leading-[1.12] tracking-tighter2 text-paper max-w-[22ch]"
               >
-                <span className="block">Inteligência analítica</span>
-                <span className="block italic font-light text-paper/80 mt-1">aplicada à</span>
-                <span className="block mt-2 text-copper">
-                  <RotatingWord
-                    words={[
-                      'ciência ambiental.',
-                      'ecologia.',
-                      'engenharia de dados.',
-                      'modelagem científica.',
-                    ]}
-                  />
-                </span>
+                Ciência, dados e tecnologia para transformar desafios complexos em <em>soluções inteligentes</em>.
               </motion.h1>
 
               <motion.p
@@ -56,11 +47,9 @@ export default function Home() {
                 initial="hidden"
                 animate="show"
                 transition={{ delay: 0.2 }}
-                className="mt-12 text-lg lg:text-xl leading-[1.65] text-paper/70 max-w-2xl"
+                className="mt-10 text-lg lg:text-xl leading-[1.65] text-paper/70 max-w-2xl"
               >
-                Desenvolvemos soluções analíticas avançadas para projetos ambientais, científicos
-                e corporativos, integrando ciência de dados, engenharia de dados e expertise
-                técnica em sistemas ambientais complexos.
+                {homeHero.sub}
               </motion.p>
 
               <motion.div
@@ -68,7 +57,7 @@ export default function Home() {
                 initial="hidden"
                 animate="show"
                 transition={{ delay: 0.32 }}
-                className="mt-14 flex flex-wrap gap-4"
+                className="mt-12 flex flex-wrap gap-4"
               >
                 <Link to="/contato" className="btn-primary">
                   Iniciar uma conversa <ArrowUpRight size={16} />
@@ -86,7 +75,7 @@ export default function Home() {
               className="lg:col-span-5 figure-editorial on-ink"
             >
               <div className="aspect-[4/5] frame">
-                <img src="/team/equipe-trio.jpg" alt="Fundadores BTF" className="object-[50%_72%]" />
+                <img src={photos.homeHeroTrio} alt="Fundadores BTF" />
                 <figcaption className="absolute bottom-5 left-5 z-20 bg-moss-deep text-paper px-3.5 py-[3px] rounded-md shadow-[0_8px_20px_-10px_rgba(0,0,0,0.4)] text-center leading-snug">
                   <span className="text-[10.5px] font-normal tracking-tight">Fundadores BTF Soluções em Dados</span>
                 </figcaption>
@@ -95,17 +84,17 @@ export default function Home() {
           </div>
         </div>
 
-        {/* stat row */}
+        {/* Stat row */}
         <div className="wrap relative">
           <div className="grid sm:grid-cols-3 gap-10 lg:gap-14 py-16 border-t border-paper/12">
-            <Fact n="01" t="Ciência aplicada" d="Time formado por doutores em Ecologia e Ciências Naturais." dark />
-            <Fact n="02" t="Engenharia robusta" d="Pipelines auditáveis em R, Python e Power BI." dark />
-            <Fact n="03" t="Foco em método" d="Soluções construídas a partir do problema, não do hype." dark />
+            {homeFacts.map(f => (
+              <Fact key={f.n} n={f.n} title={f.title} caption={f.caption} d={f.d} dark />
+            ))}
           </div>
         </div>
       </section>
 
-      {/* ─────────────── SOBRE — LIGHT ─────────────── */}
+      {/* SOBRE LIGHT */}
       <Section tone="paper" className="py-32 lg:py-44 relative overflow-hidden">
         <BrandMark kind="icon" tone="moss" size="lg" position="tr" style={{ opacity: 0.18 }} />
 
@@ -113,39 +102,46 @@ export default function Home() {
           <div className="grid lg:grid-cols-12 gap-12 mb-20">
             <div className="lg:col-span-3"><p className="label">Sobre a BTF</p></div>
             <div className="lg:col-span-9">
-              <h2 className="display-lg font-display text-3xl sm:text-4xl lg:text-[52px] leading-[1.18] tracking-tighter2 text-ink-900 max-w-[20ch]">
+              <h2 className="font-display text-3xl sm:text-4xl lg:text-[52px] leading-[1.18] tracking-tighter2 text-ink-900 max-w-[20ch]">
                 Nascemos da integração entre <em className="text-ink-700">ciência</em>, tecnologia e inteligência analítica.
               </h2>
             </div>
           </div>
 
           <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-start">
-            <div className="lg:col-span-7 grid md:grid-cols-2 gap-x-12 gap-y-7 text-ink-700 text-[17px] leading-[1.75]">
+            <div className="lg:col-span-7 space-y-6 text-ink-700 text-[17px] leading-[1.75]">
               <p>
-                Reunimos especialistas com sólida formação em Ecologia, Ciências Naturais,
+                A BTF Soluções em Dados reúne especialistas em Ecologia, Ciências Naturais,
                 Biologia, Estatística e Ciência de Dados, combinando conhecimento científico
-                aprofundado com expertise em automação, engenharia e análise de dados.
+                com engenharia de dados, automação e modelagem analítica. Oferecemos suporte
+                técnico para transformar dados brutos em análises robustas, relatórios e insights aplicáveis.
               </p>
               <p>
-                Compreendemos não apenas os dados, mas também os sistemas ecológicos e
-                biológicos que os originam. Isso nos permite desenvolver soluções
-                contextualizadas e estrategicamente orientadas.
+                Nosso diferencial está em compreender o dado dentro do sistema que o produz.
+                Não analisamos apenas números, registros ou indicadores: buscamos compreender
+                os processos ecológicos, biológicos e ambientais que estão por trás deles.
               </p>
-              <div className="md:col-span-2 pt-6">
+              <p>
+                Essa integração entre domínio científico e capacidade tecnológica nos permite
+                desenvolver soluções mais robustas, contextualizadas e confiáveis. Da estruturação
+                e integração dos dados à modelagem, automação e geração de inteligência para a
+                tomada de decisão.
+              </p>
+              <div className="pt-4">
                 <Link to="/sobre" className="btn-text">Conheça a BTF <ArrowRight size={14} /></Link>
               </div>
             </div>
 
             <figure className="lg:col-span-5 figure-editorial">
               <div className="aspect-[4/5] frame">
-                <img src={stock.forestCanopy} alt="Sistemas ambientais complexos" />
+                <img src={photos.sobreHome} alt="Sistemas ambientais complexos" />
               </div>
             </figure>
           </div>
         </div>
       </Section>
 
-      {/* ─────────────── SERVIÇOS — DARK ─────────────── */}
+      {/* SERVIÇOS DARK */}
       <Section tone="ink" className="py-32 lg:py-44 relative overflow-hidden">
         <BrandMark kind="chave" tone="light" size="lg" position="centerR" style={{ opacity: 0.03 }} />
 
@@ -153,7 +149,7 @@ export default function Home() {
           <div className="grid lg:grid-cols-12 gap-12 mb-20">
             <div className="lg:col-span-3"><p className="label label-dark">Serviços</p></div>
             <div className="lg:col-span-9">
-              <h2 className="display-lg font-display text-3xl sm:text-4xl lg:text-[56px] leading-[1.15] tracking-tighter2 text-paper max-w-[20ch]">
+              <h2 className="font-display text-3xl sm:text-4xl lg:text-[56px] leading-[1.15] tracking-tighter2 text-paper max-w-[20ch]">
                 Quatro pilares para transformar dados em decisões.
               </h2>
             </div>
@@ -198,7 +194,7 @@ export default function Home() {
         </div>
       </Section>
 
-      {/* ─────────────── ESPECIALIDADE — LIGHT WARM ─────────────── */}
+      {/* ESPECIALIDADE LIGHT WARM */}
       <Section tone="warm" className="relative overflow-hidden">
         <div className="grid lg:grid-cols-12 min-h-[640px]">
           <figure className="lg:col-span-6 relative figure-editorial">
@@ -211,13 +207,16 @@ export default function Home() {
             <BrandMark kind="padronagem" tone="moss" size="lg" position="br" style={{ opacity: 0.22 }} />
 
             <p className="label mb-10 relative">Diferencial técnico</p>
-            <h2 className="display-lg font-display text-3xl sm:text-4xl lg:text-[52px] leading-[1.15] tracking-tighter2 text-ink-900 max-w-[18ch] relative">
+            <h2 className="font-display text-3xl sm:text-4xl lg:text-[52px] leading-[1.15] tracking-tighter2 text-ink-900 max-w-[18ch] relative">
               Compreendemos o <em className="text-ink-700">sistema</em> por trás do dado.
             </h2>
-            <p className="mt-10 text-ink-700 text-[17px] leading-[1.75] max-w-md relative">
-              Combinamos engenharia analítica com conhecimento ecológico aprofundado. O resultado:
-              interpretações mais consistentes, modelagens mais robustas e soluções mais alinhadas
-              às demandas reais do setor ambiental.
+            <p className="mt-8 text-ink-700 text-[17px] leading-[1.75] max-w-md relative">
+              Não analisamos dados de forma isolada. Integramos inteligência analítica e conhecimento
+              científico contextualizado para compreender os processos que os originam.
+            </p>
+            <p className="mt-5 text-ink-700 text-[17px] leading-[1.75] max-w-md relative">
+              O resultado: análises mais consistentes, modelos mais robustos e soluções construídas
+              para os desafios reais de cada projeto.
             </p>
             <div className="mt-12 relative">
               <Link to="/especialidade" className="btn-text">Ver áreas de atuação <ArrowRight size={14} /></Link>
@@ -246,7 +245,7 @@ export default function Home() {
         </div>
       </Section>
 
-      {/* ─────────────── PORTFOLIO PREVIEW — DARK ─────────────── */}
+      {/* PORTFOLIO PREVIEW DARK */}
       <Section tone="ink" className="py-32 lg:py-40 relative overflow-hidden">
         <BrandMark kind="padronagem" tone="light" size="xxl" position="l" style={{ opacity: 0.022 }} />
 
@@ -254,7 +253,7 @@ export default function Home() {
           <div className="grid lg:grid-cols-12 gap-12 mb-20 items-end">
             <div className="lg:col-span-3"><p className="label label-dark">Trabalho</p></div>
             <div className="lg:col-span-6">
-              <h2 className="display-lg font-display text-3xl sm:text-4xl lg:text-[52px] leading-[1.15] tracking-tighter2 text-paper max-w-[22ch]">
+              <h2 className="font-display text-3xl sm:text-4xl lg:text-[52px] leading-[1.15] tracking-tighter2 text-paper max-w-[22ch]">
                 Projetos onde ciência e dados geram decisão.
               </h2>
             </div>
@@ -265,9 +264,9 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-8 lg:gap-10">
             {[
-              { img: stock.notebookData, tag: 'Dashboards & BI', title: 'Monitoramento ambiental em tempo real' },
-              { img: stock.topoMap,      tag: 'Engenharia de Dados', title: 'Pipeline integrado de dados de campo' },
-              { img: photos.cienciaDeDados, tag: 'Ciência de Dados', title: 'Modelagem ecológica preditiva' },
+              { img: photos.caseDashboards,  tag: 'Dashboards & BI',     title: 'Monitoramento ambiental em tempo real' },
+              { img: photos.caseEngenharia,  tag: 'Engenharia de Dados', title: 'Pipeline integrado de dados de campo' },
+              { img: photos.cienciaDeDados,  tag: 'Ciência de Dados',    title: 'Modelagem ecológica preditiva' },
             ].map((c, i) => (
               <motion.article
                 key={c.title}
@@ -292,7 +291,7 @@ export default function Home() {
         </div>
       </Section>
 
-      {/* ─────────────── TIME — LIGHT ─────────────── */}
+      {/* TIME LIGHT */}
       <Section tone="paper" className="py-32 lg:py-44 relative overflow-hidden">
         <BrandMark kind="icon" tone="moss" size="md" position="bl" style={{ opacity: 0.2, transform: 'rotate(20deg) translate(-30%, 30%)' }} />
 
@@ -300,8 +299,8 @@ export default function Home() {
           <div className="grid lg:grid-cols-12 gap-12 mb-20">
             <div className="lg:col-span-3"><p className="label">Time</p></div>
             <div className="lg:col-span-9 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
-              <h2 className="display-lg font-display text-3xl sm:text-4xl lg:text-[56px] leading-[1.12] tracking-tighter2 text-ink-900 max-w-[20ch]">
-                Doutorado em ciência. Fluência em método.
+              <h2 className="font-display text-3xl sm:text-4xl lg:text-[56px] leading-[1.12] tracking-tighter2 text-ink-900 max-w-[20ch]">
+                Doutorado em ecologia e ciências naturais. Fluência em método.
               </h2>
               <Link to="/time" className="btn-text">Conhecer o time <ArrowRight size={14} /></Link>
             </div>
@@ -317,8 +316,8 @@ export default function Home() {
                 transition={{ duration: 0.8, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
                 className="figure-editorial group"
               >
-                <div className="aspect-[2/3] frame">
-                  <img src={m.photo} alt={m.name} className={m.imgPos} />
+                <div className="aspect-[3/4] frame">
+                  <img src={m.photo} alt={m.name} className={`object-top ${m.imgPos || ''}`} />
                 </div>
                 <figcaption className="pt-6">
                   <div className="text-[11px] tracking-[0.18em] uppercase text-ink-500 mb-2.5">{m.title}</div>
@@ -331,7 +330,7 @@ export default function Home() {
         </div>
       </Section>
 
-      {/* ─────────────── DIFERENCIAIS + PARCEIROS — DARK ─────────────── */}
+      {/* DIFERENCIAIS + PARCEIROS DARK */}
       <Section tone="ink" className="py-32 lg:py-40 relative overflow-hidden">
         <BrandMark kind="duasChaves" tone="light" size="lg" position="tr" style={{ opacity: 0.03 }} />
 
@@ -339,8 +338,8 @@ export default function Home() {
           <div className="grid lg:grid-cols-12 gap-12 mb-16">
             <div className="lg:col-span-3"><p className="label label-dark">Diferenciais</p></div>
             <div className="lg:col-span-9">
-              <h2 className="display-lg font-display text-3xl sm:text-4xl lg:text-[52px] leading-[1.15] tracking-tighter2 text-paper max-w-[24ch]">
-                Por que consultorias e empresas científicas escolhem a BTF.
+              <h2 className="font-display text-3xl sm:text-4xl lg:text-[52px] leading-[1.15] tracking-tighter2 text-paper max-w-[24ch]">
+                Por que as empresas escolhem a BTF.
               </h2>
             </div>
           </div>
@@ -371,12 +370,15 @@ export default function Home() {
   )
 }
 
-function Fact({ n, t, d, dark }) {
+function Fact({ n, title, caption, d, dark }) {
   return (
     <div>
       <div className="num-tag text-[12px] tracking-tight mb-4">/{n}</div>
-      <div className={`font-display text-2xl lg:text-[26px] leading-[1.2] tracking-tighter2 mb-3 ${dark ? 'text-paper' : 'text-ink-900'}`}>{t}</div>
-      <div className={`text-[15px] leading-[1.65] ${dark ? 'text-paper/65' : 'text-ink-600'}`}>{d}</div>
+      <div className={`font-display text-2xl lg:text-[26px] leading-[1.2] tracking-tighter2 mb-2 ${dark ? 'text-paper' : 'text-ink-900'}`}>{title}</div>
+      {caption && (
+        <div className={`text-[14px] italic mb-2 ${dark ? 'text-paper/70' : 'text-ink-700'}`}>{caption}</div>
+      )}
+      <div className={`text-[14px] leading-[1.6] ${dark ? 'text-paper/60' : 'text-ink-600'}`}>{d}</div>
     </div>
   )
 }
