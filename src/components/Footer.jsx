@@ -9,13 +9,13 @@ export default function Footer() {
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 pb-24 border-b border-paper/10">
           <div className="lg:col-span-7">
             <p className="label label-dark mb-10">Próximo passo</p>
-            <h2 className="font-display text-[36px] sm:text-5xl lg:text-[64px] leading-[1.12] tracking-tighter2 text-paper max-w-[18ch]">
-              Trabalhamos próximos ao cliente para entender o problema antes de propor uma solução.
+            <h2 className="font-display text-[36px] sm:text-5xl lg:text-[64px] leading-[1.12] tracking-tighter2 text-paper max-w-[20ch]">
+              Trabalhamos lado a lado com nossos clientes, mergulhando no contexto e compreendendo a fundo cada desafio antes de propor qualquer solução.
             </h2>
           </div>
           <div className="lg:col-span-5 flex flex-col justify-end">
             <p className="text-paper/65 text-[17px] leading-[1.65] mb-10 max-w-md">
-              Conte sobre o seu projeto. Nosso time retorna em até dois dias úteis com uma proposta técnica orientada às necessidades reais do seu desafio.
+              Compartilhe conosco os detalhes da sua demanda: em até dois dias úteis, nossa equipe retorna com uma proposta técnica clara, personalizada e totalmente alinhada às necessidades reais do seu negócio.
             </p>
             <Link to="/contato" className="btn-outline-dark self-start">
               Iniciar uma conversa <ArrowUpRight size={16} />
