@@ -74,8 +74,8 @@ export default function Home() {
               transition={{ duration: 1.1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
               className="lg:col-span-5 figure-editorial on-ink"
             >
-              <div className="aspect-[3/2] frame">
-                <img src={photos.homeHeroTrio} alt="Fundadores BTF" className="object-center" />
+              <div className="aspect-[4/3] frame">
+                <img src={photos.homeHeroTrio} alt="Fundadores BTF" className="object-center scale-[1.05]" />
                 <figcaption className="absolute bottom-4 left-4 z-20 bg-moss-deep text-paper px-3.5 py-[3px] rounded-md shadow-[0_8px_20px_-10px_rgba(0,0,0,0.4)] text-center leading-snug">
                   <span className="text-[10.5px] font-normal tracking-tight">Fundadores BTF Soluções em Dados</span>
                 </figcaption>
