@@ -4,6 +4,7 @@ import { ArrowRight, ArrowUpRight, Check, Play } from 'lucide-react'
 import PageHeader from '../components/PageHeader.jsx'
 import { Section } from '../components/Section.jsx'
 import BrandMark from '../components/BrandMark.jsx'
+import YouTubePlayer from '../components/YouTubePlayer.jsx'
 import { photos, manualServices, manualTeam, team } from '../data/site.js'
 
 const PLANS = [
@@ -107,16 +108,10 @@ export default function ManualDoCientista() {
           </div>
 
           <div className="grid lg:grid-cols-12 gap-12">
-            <div className="lg:col-span-9 lg:col-start-4">
+            <div className="lg:col-span-7 lg:col-start-4">
               <figure className="figure-editorial on-ink">
                 <div className="aspect-video frame">
-                  <iframe
-                    src="https://www.youtube.com/embed/ULebxAV62DU?rel=0"
-                    title="Manual do Cientista"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                    className="w-full h-full"
-                  />
+                  <YouTubePlayer videoId="ULebxAV62DU" />
                 </div>
               </figure>
             </div>
@@ -225,7 +220,7 @@ export default function ManualDoCientista() {
               <em className="text-ink-700"> amizade, ciência e propósito</em>.
             </motion.p>
 
-            <div className="flex flex-wrap gap-4 justify-center pt-4">
+            <div className="flex flex-wrap gap-4 pt-4">
               <button onClick={scrollToPlanos} className="btn-primary">
                 Comece pelo método completo <ArrowUpRight size={14} />
               </button>
