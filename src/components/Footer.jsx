@@ -40,6 +40,7 @@ export default function Footer() {
               <li><Link to="/especialidade" className="link-anim hover:text-paper">Especialidade</Link></li>
               <li><Link to="/portfolio" className="link-anim hover:text-paper">Portfólio</Link></li>
               <li><Link to="/time" className="link-anim hover:text-paper">Time</Link></li>
+              <li><Link to="/manualdocientista" className="link-anim hover:text-paper">Manual do Cientista</Link></li>
               <li><Link to="/contato" className="link-anim hover:text-paper">Contato</Link></li>
             </ul>
           </div>

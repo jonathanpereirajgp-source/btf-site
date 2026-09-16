@@ -6,6 +6,7 @@ const links = [
   { to: '/sobre', label: 'Sobre' },
   { to: '/servicos', label: 'Serviços' },
   { to: '/especialidade', label: 'Especialidade' },
+  { to: '/manualdocientista', label: 'Manual do Cientista' },
   { to: '/portfolio', label: 'Portfólio' },
   { to: '/time', label: 'Time' },
 ]

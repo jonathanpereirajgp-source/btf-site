@@ -11,6 +11,7 @@ import Especialidade from './pages/Especialidade.jsx'
 import Portfolio from './pages/Portfolio.jsx'
 import Time from './pages/Time.jsx'
 import Contato from './pages/Contato.jsx'
+import ManualDoCientista from './pages/ManualDoCientista.jsx'
 import NotFound from './pages/NotFound.jsx'
 
 function ScrollToTop() {
@@ -43,6 +44,7 @@ export default function App() {
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/time" element={<Time />} />
             <Route path="/contato" element={<Contato />} />
+            <Route path="/manualdocientista" element={<ManualDoCientista />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </motion.main>

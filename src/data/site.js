@@ -22,6 +22,9 @@ export const photos = {
   visao:                 '/photos/visao.jpg',                     // Sobre - Visão (borboletas monarcas)
   valores:               '/photos/valores.jpg',                   // Sobre - Valores (campos rupestres)
 
+  // Manual do Cientista
+  manualTrio:            '/photos/manual-trio.jpg',               // Manual do Cientista - trio descontraído
+
   // Portfolio (mantidos)
   dashboardMonitoramento:'/photos/dashboard-monitoramento.jpg',
   modelagemEcologica:    '/photos/modelagem-ecologica.jpg',
@@ -257,6 +260,43 @@ export const differentiators = [
   'Integração, tratamento e padronização de dados',
   'Visualização estratégica e comunicativa de informações',
   'Alta capacidade técnica em modelagem e machine learning',
+]
+
+// Manual do Cientista — serviços
+export const manualServices = [
+  {
+    title: 'Mentorias personalizadas',
+    d: 'Acompanhamento individual, ajudando estudantes e pesquisadores a estruturar seus projetos desde a formulação de perguntas, hipóteses e predições até a análise e escrita dos resultados. As mentorias oferecem orientação prática, apoio emocional e direcionamento estratégico para superar os desafios da vida acadêmica.',
+  },
+  {
+    title: 'Consultorias científicas',
+    d: 'Atendimento especializado para resolver problemas específicos em projetos de pesquisa. Seja na organização de dados, na escolha de métodos estatísticos ou na aplicação correta do método científico, a consultoria garante soluções sob medida para cada necessidade.',
+  },
+  {
+    title: 'Cursos e treinamentos',
+    d: 'Programas de formação que ensinam desde os fundamentos do método científico até o uso avançado do R e técnicas de análise estatística univariadas e multivariada. Os cursos são pensados para serem acessíveis, práticos e aplicáveis, permitindo que o pesquisador desenvolva autonomia e confiança.',
+    link: { label: 'Ver cursos disponíveis', href: 'https://manualdocientista.com' },
+  },
+  {
+    title: 'Comunidade de apoio',
+    d: 'Além dos serviços formais, o trabalho também cria um espaço de troca e colaboração, onde pesquisadores podem compartilhar experiências, aprender uns com os outros e sentir que não estão sozinhos na jornada científica.',
+  },
+]
+
+// Manual do Cientista — trajetórias dos sócios
+export const manualTeam = [
+  {
+    name: 'Graziella',
+    text: 'Sempre sonhou em ser cientista, mesmo sem saber exatamente o que era ciência quando criança. Escolheu a biologia achando que fugiria da matemática, mas logo descobriu que ecologia e estatística caminham juntas. Desde a graduação, se apaixonou pelo R e pela estatística, ensinando colegas e aprendendo ainda mais ao compartilhar conhecimento. Hoje, sua trajetória combina sensibilidade ecológica com rigor analítico, e ela segue firme no propósito de transformar dados em histórias que revelam a vida.',
+  },
+  {
+    name: 'Thaise',
+    text: 'Formada em biologia, mergulhou em cursos de campo intensos, onde aprendeu na prática o valor do método científico: noites sem dormir, relatórios escritos às pressas e hipóteses testadas sob pressão. Esses momentos de sangue, suor e lágrimas se transformaram em capítulos de livros e artigos científicos. Buscou melhorar sua formação, estudando estatística e R para se tornar referência em análises complexas. Hoje, com experiência acadêmica sólida agrega uma visão estratégica que conecta ciência e impacto real.',
+  },
+  {
+    name: 'Cláudio',
+    text: 'Descobriu o poder do método científico ao perceber, ainda no mestrado, que estatística era a chave para transformar dados em conhecimento. Apaixonou-se pelo R depois de noites intensas em cursos de campo, onde a dificuldade de analisar dados se tornou motivação para dominar a ferramenta. Releu clássicos da ecologia, refez cursos para aprender melhor e construiu uma base sólida em análises estatísticas. Hoje, cria pipelines inteligentes e sistemas robustos que sustentam projetos de grande escala, garantindo que cada informação percorra o caminho certo, com eficiência e confiabilidade.',
+  },
 ]
 
 // Diferenciais (aba Sobre) — 10 itens (variação editorial)
