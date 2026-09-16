@@ -133,8 +133,8 @@ export default function Home() {
             </div>
 
             <figure className="lg:col-span-5 figure-editorial">
-              <div className="aspect-[4/5] frame">
-                <img src={photos.sobreHome} alt="Sistemas ambientais complexos" />
+              <div className="aspect-square frame">
+                <img src={photos.sobreHome} alt="Sistemas ambientais complexos" className="object-center" />
               </div>
             </figure>
           </div>

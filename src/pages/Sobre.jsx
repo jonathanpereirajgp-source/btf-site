@@ -70,8 +70,8 @@ export default function Sobre() {
               </p>
             </div>
             <figure className="lg:col-span-5 figure-editorial on-ink">
-              <div className="aspect-[4/5] frame">
-                <img src={photos.missao} alt="Corredeira em rio" />
+              <div className="aspect-[4/3] frame">
+                <img src={photos.missao} alt="Corredeira em rio" className="object-center" />
               </div>
             </figure>
           </div>
@@ -85,8 +85,8 @@ export default function Sobre() {
         <div className="wrap relative">
           <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             <figure className="lg:col-span-5 figure-editorial order-2 lg:order-1">
-              <div className="aspect-[4/5] frame">
-                <img src={photos.visao} alt="Borboletas monarcas" />
+              <div className="aspect-[4/3] frame">
+                <img src={photos.visao} alt="Borboletas monarcas" className="object-center" />
               </div>
             </figure>
             <div className="lg:col-span-7 order-1 lg:order-2">
@@ -139,8 +139,8 @@ export default function Sobre() {
             </div>
 
             <figure className="lg:col-span-5 figure-editorial lg:sticky lg:top-32">
-              <div className="aspect-[4/5] frame">
-                <img src={photos.valores} alt="Campos rupestres" />
+              <div className="aspect-[4/3] frame">
+                <img src={photos.valores} alt="Campos rupestres" className="object-center" />
               </div>
             </figure>
           </div>
