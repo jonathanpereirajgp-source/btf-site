@@ -27,8 +27,8 @@ export default function Footer() {
           <div className="md:col-span-5">
             <img src="/brand/logo-extensa-branco.svg" alt="BTF Soluções em Dados" className="h-9 mb-8" />
             <p className="text-paper/55 max-w-sm leading-[1.7] text-[15px]">
-              Consultoria científica em ciência e engenharia de dados aplicadas a projetos
-              ambientais, científicos e corporativos.
+              Consultoria especializada em ciência, análise e engenharia de dados,
+              aplicada a projetos ambientais, corporativos e acadêmicos.
             </p>
           </div>
 
