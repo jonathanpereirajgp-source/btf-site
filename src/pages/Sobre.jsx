@@ -171,7 +171,7 @@ export default function Sobre() {
             ))}
           </ul>
 
-          <div className="mt-20 flex flex-wrap gap-4">
+          <div className="mt-20 flex flex-wrap gap-4 justify-center">
             <Link to="/servicos" className="btn-primary">Explorar serviços</Link>
             <Link to="/contato" className="btn-outline-dark">Falar com a BTF <ArrowRight size={14} /></Link>
           </div>
