@@ -317,7 +317,7 @@ export default function Home() {
                 className="figure-editorial group"
               >
                 <div className="aspect-[3/4] frame">
-                  <img src={m.photo} alt={m.name} className={`object-top ${m.imgPos || ''}`} />
+                  <img src={m.photo} alt={m.name} className={m.imgPos || 'object-top'} />
                 </div>
                 <figcaption className="pt-6">
                   <div className="text-[11px] tracking-[0.18em] uppercase text-ink-500 mb-2.5">{m.title}</div>
