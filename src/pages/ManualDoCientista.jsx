@@ -1,11 +1,12 @@
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { ArrowRight, ArrowUpRight, Check, Play } from 'lucide-react'
+import { ArrowRight, ArrowUpRight, Check, Play, Plus, Minus, Sparkles, BookOpen, LineChart, FileText, ShieldCheck, Compass, Target } from 'lucide-react'
 import PageHeader from '../components/PageHeader.jsx'
 import { Section } from '../components/Section.jsx'
 import BrandMark from '../components/BrandMark.jsx'
 import YouTubePlayer from '../components/YouTubePlayer.jsx'
-import { photos, manualServices, manualTeam, team } from '../data/site.js'
+import { photos, manualTeam, team, manualHero, manualBenefits, manualDiferenciais, manualFaq } from '../data/site.js'
 
 const PLANS = [
   {
@@ -34,6 +35,8 @@ const PLANS = [
   },
 ]
 
+const BENEFIT_ICONS = [LineChart, Sparkles, FileText, ShieldCheck, Compass, Target]
+
 // Map trio names to team photos already loaded on the site
 const teamPhotoByName = {
   'Graziella': team.find(t => t.name.startsWith('Graziella')),
@@ -50,33 +53,38 @@ export default function ManualDoCientista() {
   return (
     <>
       <PageHeader
-        eyebrow="Manual do Cientista"
-        title="A raiz da BTF, ao lado dos pesquisadores em formação."
-        sub="O Manual é a raiz da BTF, e, ao mesmo tempo, segue sendo um braço importante nos serviços prestados aos pesquisadores em formação e à comunidade acadêmica."
+        eyebrow={manualHero.eyebrow}
+        title={manualHero.headline}
+        sub={manualHero.sub}
         mark="chave"
       />
 
-      {/* MISSÃO */}
-      <Section tone="paper" className="py-32 lg:py-40 relative overflow-hidden">
+      {/* HERO CTA + foto trio */}
+      <Section tone="paper" className="pt-10 pb-28 lg:pb-36 relative overflow-hidden">
         <BrandMark kind="icon" tone="moss" size="md" position="tr" style={{ opacity: 0.2 }} />
 
         <div className="wrap relative">
           <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-            <div className="lg:col-span-7 lg:pt-4 space-y-6 text-ink-700 text-[18px] leading-[1.8]">
-              <p>
-                A missão do Manual é ensinar aos pesquisadores como aplicar o método científico
-                corretamente e utilizar ferramentas analíticas robustas, garantindo sua
-                independência para construir seu trabalho com menos dificuldades e em menor tempo.
-              </p>
-              <p>
-                Mais do que ensinar estatística ou R, prestamos serviços importantes: criando uma
-                comunidade de apoio, fortalecendo a formação científica e ajudando a transformar
-                dados em informações seguras e relevantes.
-              </p>
-              <div className="pt-4">
+            <div className="lg:col-span-7 lg:pt-4 space-y-8">
+              <div className="space-y-6 text-ink-700 text-[18px] leading-[1.8]">
+                <p>
+                  Há mais de 10 anos trabalhamos com análise de dados e pesquisa científica,
+                  ajudando pesquisadores a dominarem a metodologia, interpretarem seus dados,
+                  terem uma defesa tranquila e transformarem suas pesquisas em artigos de impacto.
+                </p>
+                <p>
+                  Fundamos o Manual do Cientista com um único objetivo: facilitar a vida de alunos
+                  de graduação e pós-graduação, oferecendo um método claro e prático para análise
+                  de dados e escrita acadêmica.
+                </p>
+              </div>
+              <div className="flex flex-wrap gap-4">
                 <button onClick={scrollToPlanos} className="btn-primary">
-                  Acessar o método completo <ArrowUpRight size={14} />
+                  {manualHero.cta} <ArrowUpRight size={14} />
                 </button>
+                <a href="https://manualdocientista.com" target="_blank" rel="noreferrer" className="btn-outline">
+                  Acessar o grupo CDP <ArrowUpRight size={14} />
+                </a>
               </div>
             </div>
             <figure className="lg:col-span-5 figure-editorial">
@@ -92,7 +100,7 @@ export default function ManualDoCientista() {
       </Section>
 
       {/* VÍDEO */}
-      <Section tone="ink" className="py-24 lg:py-32 relative overflow-hidden">
+      <Section tone="ink" className="py-24 lg:py-28 relative overflow-hidden">
         <BrandMark kind="padronagem" tone="light" size="xl" position="l" style={{ opacity: 0.028 }} />
 
         <div className="wrap relative">
@@ -119,51 +127,124 @@ export default function ManualDoCientista() {
         </div>
       </Section>
 
-      {/* COMO NASCEU */}
+      {/* BENEFÍCIOS */}
       <Section tone="paper" className="py-32 lg:py-40 relative overflow-hidden">
-        <BrandMark kind="chave" tone="moss" size="md" position="bl" style={{ opacity: 0.18 }} />
+        <BrandMark kind="chave" tone="moss" size="md" position="tr" style={{ opacity: 0.18 }} />
 
         <div className="wrap relative">
           <div className="grid lg:grid-cols-12 gap-12 mb-16">
-            <div className="lg:col-span-3"><p className="label">Como nasceu</p></div>
+            <div className="lg:col-span-3"><p className="label">Benefícios do curso</p></div>
             <div className="lg:col-span-9">
-              <h2 className="font-display text-3xl sm:text-4xl lg:text-[52px] leading-[1.18] tracking-tighter2 text-ink-900 max-w-[22ch]">
-                Uma inquietação em 2021, o desejo de ajudar quem precisa de <em className="text-ink-700">estatística</em>.
+              <h2 className="font-display text-3xl sm:text-4xl lg:text-[52px] leading-[1.15] tracking-tighter2 text-ink-900 max-w-[24ch]">
+                Conteúdos exclusivos para destravar sua pesquisa e <em className="text-ink-700">analisar dados</em> com confiança.
               </h2>
             </div>
           </div>
 
-          <div className="grid lg:grid-cols-12 gap-12">
-            <div className="lg:col-span-9 lg:col-start-4 space-y-6 text-ink-700 text-[17px] leading-[1.8]">
-              <p>
-                A ideia do Manual surgiu de uma inquietação de Grazi em meados de 2021, época de
-                pandemia. Nós nos conhecíamos e convivíamos há bastante tempo e fomos contemporâneos
-                em diferentes universidades. Um certo dia nos reunimos e debatemos sobre como pode
-                ser difícil para quem depende de ajuda com estatística concluir seu TCC, dissertação
-                ou tese. Por vezes até mesmo um artigo científico.
-              </p>
-              <p>
-                A análise estatística é um trabalho importante que na academia é feito de forma
-                árdua e altruísta. Todo mundo ia tentando se ajudar para vencer mais uma etapa,
-                mas naquele momento e com o distanciamento social muita gente estava com problemas
-                estatísticos acumulados, e quem poderia ajudar também tinha suas demandas.
-              </p>
-              <p>
-                Assim nasceu o Manual do Cientista como uma página no Instagram
-                (<a href="https://www.instagram.com/manualdocientistajr/" target="_blank" rel="noreferrer" className="text-ink-900 link-anim">@manualdocientistajr</a>)
-                para fazer divulgação de método científico, análises estatísticas, scripts e pacotes
-                para o R. Nosso plano era, com o tempo, prestar consultorias, mentorias e vender
-                cursos, unindo nosso conhecimento acadêmico e estatístico a um serviço que nós já
-                fazíamos, mas não considerávamos como trabalho.
-              </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+            {manualBenefits.map((b, i) => {
+              const Icon = BENEFIT_ICONS[i] || Sparkles
+              return (
+                <motion.article
+                  key={b.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: '-60px' }}
+                  transition={{ duration: 0.7, delay: (i % 3) * 0.08, ease: [0.22, 1, 0.36, 1] }}
+                  className="border-t border-ink-900/15 pt-6"
+                >
+                  <div className="flex items-center justify-between mb-5">
+                    <p className="num-tag text-[13px] tracking-tight">/{String(i + 1).padStart(2, '0')}</p>
+                    <Icon size={18} className="text-moss-deep" />
+                  </div>
+                  <h3 className="font-display text-xl lg:text-[26px] leading-[1.2] tracking-tighter2 text-ink-900 mb-4">
+                    {b.title}
+                  </h3>
+                  <p className="text-ink-700 text-[15px] leading-[1.7]">{b.d}</p>
+                </motion.article>
+              )
+            })}
+          </div>
+
+          <div className="mt-16 flex flex-wrap gap-4">
+            <button onClick={scrollToPlanos} className="btn-primary">
+              Começar agora <ArrowUpRight size={14} />
+            </button>
+          </div>
+        </div>
+      </Section>
+
+      {/* PASSO A PASSO + imagem */}
+      <Section tone="warm" className="relative overflow-hidden">
+        <div className="grid lg:grid-cols-12 min-h-[560px]">
+          <figure className="lg:col-span-6 relative figure-editorial">
+            <div className="absolute inset-0 frame">
+              <img src={photos.nascenteCristalina} alt="Método claro, do começo ao fim" />
+            </div>
+          </figure>
+          <div className="lg:col-span-6 px-6 md:px-12 lg:px-20 py-24 lg:py-32 flex flex-col justify-center relative">
+            <BrandMark kind="padronagem" tone="moss" size="md" position="br" style={{ opacity: 0.18 }} />
+            <p className="label mb-8 relative">O método</p>
+            <h2 className="font-display text-3xl sm:text-4xl lg:text-[48px] leading-[1.15] tracking-tighter2 text-ink-900 max-w-[18ch] relative">
+              O passo a passo completo para <em className="text-ink-700">dominar</em> sua pesquisa.
+            </h2>
+            <p className="mt-8 text-ink-700 text-[17px] leading-[1.75] max-w-md relative">
+              Da metodologia científica à escrita do artigo, cada módulo foi pensado para tornar
+              sua jornada mais clara e prática.
+            </p>
+            <div className="mt-10 relative">
+              <button onClick={scrollToPlanos} className="btn-outline">
+                Ver detalhes dos planos <ArrowRight size={14} />
+              </button>
             </div>
           </div>
         </div>
       </Section>
 
+      {/* DIFERENCIAIS */}
+      <Section tone="ink" className="py-32 lg:py-40 relative overflow-hidden">
+        <BrandMark kind="duasChaves" tone="light" size="lg" position="tl" style={{ opacity: 0.03 }} />
+
+        <div className="wrap relative">
+          <div className="grid lg:grid-cols-12 gap-12 mb-16">
+            <div className="lg:col-span-3"><p className="label label-dark">Diferenciais</p></div>
+            <div className="lg:col-span-9">
+              <h2 className="font-display text-3xl sm:text-4xl lg:text-[52px] leading-[1.18] tracking-tighter2 text-paper max-w-[22ch]">
+                Muito mais que um curso <em>online</em>.
+              </h2>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 lg:gap-10">
+            {manualDiferenciais.map((d, i) => (
+              <motion.article
+                key={d.title}
+                initial={{ opacity: 0, y: 22 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-60px' }}
+                transition={{ duration: 0.8, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
+                className="border-t border-paper/15 pt-8"
+              >
+                <p className="num-tag text-[13px] tracking-tight mb-4">/{String(i + 1).padStart(2, '0')}</p>
+                <h3 className="font-display text-2xl lg:text-[30px] leading-[1.15] tracking-tighter2 text-paper mb-5">
+                  {d.title}
+                </h3>
+                <p className="text-paper/70 text-[16px] leading-[1.7]">{d.d}</p>
+              </motion.article>
+            ))}
+          </div>
+
+          <div className="mt-16 flex flex-wrap gap-4">
+            <button onClick={scrollToPlanos} className="btn-primary">
+              Finalize sua inscrição <ArrowUpRight size={14} />
+            </button>
+          </div>
+        </div>
+      </Section>
+
       {/* O TRIO */}
-      <Section tone="warm" className="py-32 lg:py-40 relative overflow-hidden">
-        <BrandMark kind="chave" tone="moss" size="md" position="tr" style={{ opacity: 0.18 }} />
+      <Section tone="paper" className="py-32 lg:py-40 relative overflow-hidden">
+        <BrandMark kind="chave" tone="moss" size="md" position="bl" style={{ opacity: 0.18 }} />
 
         <div className="wrap relative">
           <div className="grid lg:grid-cols-12 gap-12 mb-16">
@@ -208,84 +289,12 @@ export default function ManualDoCientista() {
                 </motion.article>
               )
             })}
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-              className="font-display text-2xl lg:text-[36px] leading-[1.3] tracking-tighter2 text-ink-900 max-w-[36ch] pt-10 border-t border-ink-900/15"
-            >
-              A história do Manual nos conecta afetivamente para formar um trio que une
-              <em className="text-ink-700"> amizade, ciência e propósito</em>.
-            </motion.p>
-
-            <div className="flex flex-wrap gap-4 pt-4">
-              <button onClick={scrollToPlanos} className="btn-primary">
-                Comece pelo método completo <ArrowUpRight size={14} />
-              </button>
-            </div>
-          </div>
-        </div>
-      </Section>
-
-      {/* SERVIÇOS */}
-      <Section tone="ink" className="py-32 lg:py-40 relative overflow-hidden">
-        <BrandMark kind="duasChaves" tone="light" size="lg" position="tr" style={{ opacity: 0.03 }} />
-
-        <div className="wrap relative">
-          <div className="grid lg:grid-cols-12 gap-12 mb-16">
-            <div className="lg:col-span-3"><p className="label label-dark">Serviços</p></div>
-            <div className="lg:col-span-9">
-              <h2 className="font-display text-3xl sm:text-4xl lg:text-[52px] leading-[1.18] tracking-tighter2 text-paper max-w-[24ch]">
-                O que oferecemos aos <em>pesquisadores</em> em formação.
-              </h2>
-            </div>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
-            {manualServices.map((s, i) => (
-              <motion.article
-                key={s.title}
-                initial={{ opacity: 0, y: 22 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-60px' }}
-                transition={{ duration: 0.8, delay: (i % 2) * 0.1, ease: [0.22, 1, 0.36, 1] }}
-                className="border-t border-paper/15 pt-8 lg:pt-10"
-              >
-                <p className="num-tag text-[13px] tracking-tight mb-4">/{String(i + 1).padStart(2, '0')}</p>
-                <h3 className="font-display text-2xl lg:text-[34px] leading-[1.15] tracking-tighter2 text-paper mb-6">
-                  {s.title}
-                </h3>
-                <p className="text-paper/70 text-[16px] leading-[1.75]">{s.d}</p>
-                {s.link && (
-                  <button
-                    onClick={scrollToPlanos}
-                    className="btn-text-dark mt-8 inline-flex"
-                  >
-                    {s.link.label} <ArrowUpRight size={14} />
-                  </button>
-                )}
-              </motion.article>
-            ))}
-          </div>
-
-          <p className="mt-20 text-paper/70 text-[17px] leading-[1.75] max-w-3xl">
-            Nosso conjunto de serviços não apenas ensina técnicas, mas forma pesquisadores mais
-            independentes, seguros, preparados e conectados, reduzindo o sofrimento comum na
-            carreira acadêmica e acelerando o caminho até resultados consistentes.
-          </p>
-
-          <div className="mt-14 flex flex-wrap gap-4">
-            <button onClick={scrollToPlanos} className="btn-primary">
-              Finalize sua inscrição <ArrowUpRight size={14} />
-            </button>
           </div>
         </div>
       </Section>
 
       {/* PLANOS */}
-      <Section id="planos" tone="paper" className="py-32 lg:py-40 relative overflow-hidden">
+      <Section id="planos" tone="warm" className="py-32 lg:py-40 relative overflow-hidden">
         <BrandMark kind="padronagem" tone="moss" size="xl" position="r" style={{ opacity: 0.18 }} />
 
         <div className="wrap relative">
@@ -323,25 +332,22 @@ export default function ManualDoCientista() {
                       Mais escolhido
                     </span>
                   )}
-                  <p className={`num-tag text-[13px] tracking-tight mb-2`}>/{String(i + 1).padStart(2, '0')}</p>
+                  <p className="num-tag text-[13px] tracking-tight mb-2">/{String(i + 1).padStart(2, '0')}</p>
                   <div className={`text-[11px] tracking-[0.22em] uppercase ${featured ? 'text-paper/60' : 'text-ink-500'} mb-6`}>
                     Plano {p.tag}
                   </div>
-
                   <div className="mb-2 font-display text-[40px] lg:text-[52px] leading-[1] tracking-tighter2">
                     {p.price}
                   </div>
                   <div className={`text-[14px] ${featured ? 'text-paper/60' : 'text-ink-500'} mb-6`}>
                     {p.period} · {p.subline}
                   </div>
-
                   <ul className={`space-y-3 text-[14px] leading-[1.5] mb-10 ${featured ? 'text-paper/80' : 'text-ink-700'}`}>
                     <li className="flex items-start gap-2"><Check size={14} className={featured ? 'text-moss mt-0.5' : 'text-copper mt-0.5'} /> Acesso completo ao método</li>
                     <li className="flex items-start gap-2"><Check size={14} className={featured ? 'text-moss mt-0.5' : 'text-copper mt-0.5'} /> Cursos de R e estatística</li>
                     <li className="flex items-start gap-2"><Check size={14} className={featured ? 'text-moss mt-0.5' : 'text-copper mt-0.5'} /> Comunidade e suporte</li>
                     <li className="flex items-start gap-2"><Check size={14} className={featured ? 'text-moss mt-0.5' : 'text-copper mt-0.5'} /> Materiais e atualizações</li>
                   </ul>
-
                   <a
                     href={p.href}
                     target="_blank"
@@ -365,30 +371,124 @@ export default function ManualDoCientista() {
         </div>
       </Section>
 
-      {/* CTA FINAL */}
-      <Section tone="ink" className="py-28 relative overflow-hidden">
-        <BrandMark kind="icon" tone="light" size="md" position="br" style={{ opacity: 0.04 }} />
+      {/* SOBRE O MANUAL (texto longo) */}
+      <Section tone="paper" className="py-32 lg:py-40 relative overflow-hidden">
+        <BrandMark kind="icon" tone="moss" size="md" position="tr" style={{ opacity: 0.18 }} />
 
         <div className="wrap relative">
-          <div className="grid lg:grid-cols-12 gap-12 items-end">
-            <div className="lg:col-span-8">
-              <h3 className="font-display text-3xl lg:text-[48px] leading-[1.18] tracking-tighter2 text-paper max-w-[22ch]">
-                Quer conversar antes de decidir?
-              </h3>
-              <p className="mt-6 text-paper/70 text-[17px] leading-[1.75] max-w-xl">
-                Se você ainda tem dúvidas sobre qual plano faz mais sentido ou quer entender como
-                o método se aplica ao seu projeto, fale direto com a equipe.
-              </p>
-            </div>
-            <div className="lg:col-span-4 flex flex-wrap gap-4 justify-start lg:justify-end">
-              <button onClick={scrollToPlanos} className="btn-primary">
-                Ver planos <ArrowUpRight size={14} />
-              </button>
-              <Link to="/contato" className="btn-outline-dark">Falar com a BTF <ArrowRight size={14} /></Link>
+          <div className="grid lg:grid-cols-12 gap-12">
+            <div className="lg:col-span-3"><p className="label">Sobre o Manual</p></div>
+            <div className="lg:col-span-9">
+              <h2 className="font-display text-3xl sm:text-4xl lg:text-[48px] leading-[1.18] tracking-tighter2 text-ink-900 max-w-[22ch] mb-10">
+                Seu guia na <em className="text-ink-700">jornada acadêmica</em>.
+              </h2>
+              <div className="space-y-6 text-ink-700 text-[17px] leading-[1.8] max-w-3xl">
+                <p>
+                  Se você se sente perdido, sem apoio do seu orientador ou com dificuldade para
+                  estruturar sua pesquisa, podemos ajudar. Com o nosso método você terá mais
+                  segurança para interpretar seus resultados, ir para sua defesa sem sustos e
+                  transformar sua pesquisa em um artigo publicável.
+                </p>
+                <p>
+                  A ideia do Manual surgiu em 2021, na pandemia, de uma inquietação da Grazi.
+                  Havia muita gente com problemas estatísticos acumulados e pouca gente disponível
+                  para ajudar. Assim nasceu uma página no Instagram
+                  (<a href="https://www.instagram.com/manualdocientistajr/" target="_blank" rel="noreferrer" className="text-ink-900 link-anim">@manualdocientistajr</a>)
+                  para divulgar método científico, análises estatísticas, scripts e pacotes para R.
+                </p>
+                <p>
+                  Hoje, o Manual do Cientista é um conjunto de serviços formais e informais:
+                  cursos, mentorias, consultorias e uma comunidade de apoio que entende a realidade
+                  de quem pesquisa, e caminha junto.
+                </p>
+                <div className="pt-4">
+                  <button onClick={scrollToPlanos} className="btn-primary">
+                    Finalize sua inscrição <ArrowUpRight size={14} />
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </Section>
+
+      {/* FAQ */}
+      <Section tone="ink" className="py-32 lg:py-40 relative overflow-hidden">
+        <BrandMark kind="padronagem" tone="light" size="lg" position="l" style={{ opacity: 0.025 }} />
+
+        <div className="wrap relative">
+          <div className="grid lg:grid-cols-12 gap-12 mb-16">
+            <div className="lg:col-span-3"><p className="label label-dark">Dúvidas frequentes</p></div>
+            <div className="lg:col-span-9">
+              <h2 className="font-display text-3xl sm:text-4xl lg:text-[52px] leading-[1.18] tracking-tighter2 text-paper max-w-[22ch]">
+                Tirando as principais <em>dúvidas</em>.
+              </h2>
+            </div>
+          </div>
+
+          <div className="grid lg:grid-cols-12 gap-12">
+            <div className="lg:col-span-9 lg:col-start-4">
+              <div className="border-t border-paper/15">
+                {manualFaq.map((item, i) => (
+                  <FaqRow key={item.q} index={i} q={item.q} a={item.a} />
+                ))}
+              </div>
+              <div className="mt-14 flex flex-wrap gap-4">
+                <button onClick={scrollToPlanos} className="btn-primary">
+                  Ver planos <ArrowUpRight size={14} />
+                </button>
+                <Link to="/contato" className="btn-outline-dark">Falar com a BTF <ArrowRight size={14} /></Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      {/* DISCLAIMER */}
+      <Section tone="paper" className="py-16">
+        <div className="wrap">
+          <p className="text-center text-ink-500 text-[13px] max-w-2xl mx-auto leading-[1.7]">
+            Este é o site oficial do Manual do Cientista. Todo o conteúdo disponível aqui é
+            exclusivo e desenvolvido pelos nossos especialistas. Qualquer outra página que ofereça
+            nossos cursos não está autorizada. Para garantir seu acesso ao material oficial,
+            faça sua inscrição apenas por este site.
+          </p>
+        </div>
+      </Section>
     </>
+  )
+}
+
+function FaqRow({ index, q, a }) {
+  const [open, setOpen] = useState(false)
+  return (
+    <div className="border-b border-paper/15">
+      <button
+        onClick={() => setOpen(v => !v)}
+        className="w-full py-6 flex items-start justify-between gap-6 text-left group"
+      >
+        <div className="flex items-baseline gap-5">
+          <span className="num-tag text-[12px] tracking-tight shrink-0 w-10">
+            /{String(index + 1).padStart(2, '0')}
+          </span>
+          <span className="font-display text-xl lg:text-[26px] leading-[1.25] tracking-tighter2 text-paper">
+            {q}
+          </span>
+        </div>
+        <span className="shrink-0 mt-2 w-9 h-9 grid place-items-center border border-paper/30 rounded-full text-paper transition-all duration-500 group-hover:border-paper group-hover:bg-paper group-hover:text-ink-900">
+          {open ? <Minus size={14} /> : <Plus size={14} />}
+        </span>
+      </button>
+      {open && (
+        <motion.div
+          initial={{ opacity: 0, height: 0 }}
+          animate={{ opacity: 1, height: 'auto' }}
+          transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+          className="pl-[60px] pb-8 text-paper/75 text-[16px] leading-[1.75] max-w-3xl"
+        >
+          {a}
+        </motion.div>
+      )}
+    </div>
   )
 }

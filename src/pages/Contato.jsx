@@ -11,9 +11,26 @@ export default function Contato() {
 
   const submit = (e) => {
     e.preventDefault()
+    const to = 'contato@btfdados.com.br'
+    const subject = `Novo contato pelo site — ${form.area}${form.empresa ? ' — ' + form.empresa : ''}`
+    const body =
+`Olá, equipe BTF.
+
+Recebi este contato pelo site:
+
+Nome: ${form.nome}
+E-mail: ${form.email}
+Empresa / Organização: ${form.empresa || '(não informado)'}
+Área de interesse: ${form.area}
+
+Mensagem:
+${form.mensagem}
+
+, enviado pelo formulário do site btfdados.com.br`
+    const mailto = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+    window.location.href = mailto
     setSent(true)
     setTimeout(() => setSent(false), 6000)
-    setForm({ nome: '', email: '', empresa: '', area: 'Ciência de Dados', mensagem: '' })
   }
 
   return (

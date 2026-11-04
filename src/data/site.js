@@ -270,6 +270,94 @@ export const differentiators = [
   'Alta capacidade técnica em modelagem e machine learning',
 ]
 
+// Manual do Cientista — hero / headline
+export const manualHero = {
+  eyebrow: 'Curso Manual do Cientista',
+  headline: 'Aprenda a analisar seus dados de forma simples e rápida.',
+  sub: 'Torne-se um pesquisador mais preparado e destaque-se na sua carreira com apenas 1 hora de estudo por dia.',
+  cta: 'Acessar o método completo',
+}
+
+// Manual do Cientista — benefícios do curso (6 blocos)
+export const manualBenefits = [
+  {
+    title: 'Analise seus dados sem complicação',
+    d: 'Transforme dados em resultados e aplique os testes estatísticos certos para a sua pesquisa, do começo ao fim.',
+  },
+  {
+    title: 'Gráficos profissionais em poucos cliques',
+    d: 'Crie visualizações que tornam seus resultados mais claros, bonitos e impactantes.',
+  },
+  {
+    title: 'Artigos aprovados mais rápido',
+    d: 'Estruture seu texto para agradar revisores e submeta com confiança para periódicos de verdade.',
+  },
+  {
+    title: 'Evite erros que comprometem a pesquisa',
+    d: 'Reconheça as armadilhas mais comuns e proteja a credibilidade do seu trabalho.',
+  },
+  {
+    title: 'Método passo a passo, com exemplos reais',
+    d: 'Nada de teoria vazia. Exercícios guiados que replicam o cotidiano de quem pesquisa.',
+  },
+  {
+    title: 'Domine a metodologia científica',
+    d: 'Fortaleça sua base conceitual e destaque-se pela consistência técnica na sua área.',
+  },
+]
+
+// Manual do Cientista — diferenciais do curso
+export const manualDiferenciais = [
+  {
+    title: 'Foco total na aplicação prática',
+    d: 'Nada de teoria vazia. Você aprende com exemplos reais e exercícios guiados que aceleram a sua pesquisa.',
+  },
+  {
+    title: 'Módulo exclusivo de escrita científica',
+    d: 'Além de analisar dados, você aprende a transformar sua pesquisa em um artigo publicável. Bônus: modelo estruturado de artigo pronto para usar.',
+  },
+  {
+    title: 'Aulas curtas e diretas',
+    d: 'Com apenas 1 hora por dia, você já consegue aplicar o que aprendeu e avançar na sua pesquisa.',
+  },
+]
+
+// Manual do Cientista — FAQ
+export const manualFaq = [
+  {
+    q: 'O que é o Manual do Cientista?',
+    a: 'Um curso completo para pesquisadores que ensina análise de dados, estatística aplicada, criação de gráficos e escrita científica, ajudando alunos de graduação e pós-graduação a estruturarem suas pesquisas com confiança.',
+  },
+  {
+    q: 'Para quem o curso é indicado?',
+    a: 'Alunos de graduação, pós-graduação (mestrado, doutorado) e pesquisadores que precisam analisar dados, aplicar o método científico e publicar artigos com mais segurança e autonomia.',
+  },
+  {
+    q: 'Preciso ter conhecimento prévio em estatística ou programação?',
+    a: 'Não. O curso começa do zero, com explicações simples e exemplos reais. Qualquer pessoa com disposição para estudar 1 hora por dia consegue acompanhar.',
+  },
+  {
+    q: 'O curso ensina a escrever artigos científicos?',
+    a: 'Sim. Há um módulo exclusivo de escrita científica, com estrutura, dicas práticas e um modelo pronto para você adaptar à sua pesquisa.',
+  },
+  {
+    q: 'Como funciona o acesso ao curso?',
+    a: 'Após a confirmação do pagamento, você recebe por e-mail os dados de acesso à plataforma. Pode estudar pelo navegador, no horário que quiser.',
+  },
+  {
+    q: 'Por quanto tempo tenho acesso?',
+    a: 'O acesso é vinculado ao plano escolhido (mensal, semestral ou anual) e renovado automaticamente até o cancelamento. Enquanto o plano estiver ativo, o acesso é completo a todo o conteúdo e atualizações.',
+  },
+  {
+    q: 'O curso oferece suporte para dúvidas?',
+    a: 'Sim. Você conta com a comunidade de alunos para trocar experiências e com canais oficiais de atendimento para tirar dúvidas técnicas.',
+  },
+  {
+    q: 'Como funciona a política de reembolso?',
+    a: 'Garantia de 7 dias prevista no Código de Defesa do Consumidor. Se não gostar, basta solicitar o reembolso dentro desse prazo pela plataforma de pagamento.',
+  },
+]
+
 // Manual do Cientista — serviços
 export const manualServices = [
   {
