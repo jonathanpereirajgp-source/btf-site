@@ -25,6 +25,14 @@ export const photos = {
   // Manual do Cientista
   manualTrio:            '/photos/manual-trio.jpg',               // Manual do Cientista - trio descontraído
 
+  // Novas fotos ambientais do Drive (aplicadas em Serviços e Portfólio)
+  paisagemPanoramica:    '/photos/paisagem-panoramica.jpg',       // Dashboards & BI - visão panorâmica
+  nascenteCristalina:    '/photos/nascente-cristalina.jpg',       // Automação - fluxo limpo contínuo
+  rioCorrente:           '/photos/rio-corrente.jpg',              // Pipeline / fluxo de dados
+  reflexoCamadas:        '/photos/reflexo-camadas.jpg',           // Dashboard de monitoramento / camadas
+  valeEstrategico:       '/photos/vale-estrategico.jpg',          // ESG / visão estratégica
+  texturaOrganica:       '/photos/textura-organica.jpg',          // Automação de relatórios / organização
+
   // Portfolio (mantidos)
   dashboardMonitoramento:'/photos/dashboard-monitoramento.jpg',
   modelagemEcologica:    '/photos/modelagem-ecologica.jpg',

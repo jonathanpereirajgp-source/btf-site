@@ -5,14 +5,14 @@ import { ArrowRight, ArrowUpRight } from 'lucide-react'
 import PageHeader from '../components/PageHeader.jsx'
 import { Section } from '../components/Section.jsx'
 import BrandMark from '../components/BrandMark.jsx'
-import { services, stack, stock, photos } from '../data/site.js'
+import { services, stack, photos } from '../data/site.js'
 
-// Resolve image source per service. Custom BTF photo for Engenharia de Dados; stock otherwise.
+// Resolve image source per service — todas são fotos reais da BTF (natureza aplicada à ciência).
 const serviceImage = {
   'ciencia-de-dados':    photos.cienciaDeDados,
   'engenharia-de-dados': photos.engenhariaDeDados,
-  'dashboards-bi':       stock.notebookData,
-  'automacao':           stock.labNotebook,
+  'dashboards-bi':       photos.paisagemPanoramica,
+  'automacao':           photos.nascenteCristalina,
 }
 
 export default function Servicos() {
@@ -61,7 +61,7 @@ export default function Servicos() {
       {/* Each service — alternating */}
       {services.map((s, i) => {
         const isDark = i % 2 === 0
-        const imgSrc = serviceImage[s.slug] || stock.forestCanopy
+        const imgSrc = serviceImage[s.slug] || photos.paisagemPanoramica
         return (
           <Section
             key={s.slug}

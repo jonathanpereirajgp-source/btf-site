@@ -4,15 +4,16 @@ import { ArrowRight } from 'lucide-react'
 import PageHeader from '../components/PageHeader.jsx'
 import { Section } from '../components/Section.jsx'
 import BrandMark from '../components/BrandMark.jsx'
-import { portfolioCases, partners, stock, photos } from '../data/site.js'
+import { portfolioCases, partners, photos } from '../data/site.js'
 
+// Fotos reais da BTF para cada case (natureza ↔ conceito)
 const caseImage = [
-  photos.dashboardMonitoramento,
-  stock.topoMap,
-  photos.modelagemEcologica,
-  stock.labNotebook,
-  stock.forestRiver,
-  stock.scienceField,
+  photos.dashboardMonitoramento,  // Dashboard de monitoramento ambiental
+  photos.rioCorrente,             // Pipeline integrado - fluxo contínuo
+  photos.modelagemEcologica,      // Modelagem ecológica preditiva
+  photos.texturaOrganica,         // Automação de relatórios - organização
+  photos.reflexoCamadas,          // Banco de metadados - camadas
+  photos.valeEstrategico,         // ESG - visão estratégica
 ]
 
 export default function Portfolio() {
@@ -79,7 +80,7 @@ export default function Portfolio() {
               >
                 <figure className="figure-editorial on-ink mb-8">
                   <div className="aspect-[4/3] frame">
-                    <img src={caseImage[i] || stock.forestCanopy} alt={c.title} />
+                    <img src={caseImage[i] || photos.paisagemPanoramica} alt={c.title} />
                   </div>
                 </figure>
                 <div className="flex items-center justify-between text-[11px] tracking-[0.18em] uppercase text-paper/55 mb-4">
