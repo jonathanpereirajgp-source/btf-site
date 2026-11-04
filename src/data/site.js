@@ -143,13 +143,15 @@ export const services = [
   },
 ]
 
+// photo = foto original usada em /time (sem crop automático)
+// homePhoto = foto cropada (aspect 3:4, rosto a 25% do topo) usada só na Home
 export const team = [
   {
     name: 'Cláudio Tavares Jr.',
     role: 'Biólogo · Cientista e Engenheiro de Dados',
     title: 'Doutor em Ciências Naturais',
     photo: '/team/claudio.jpg',
-    // Fotos já cropadas (aspect 3:4) com rosto a ~25% do topo — ver scripts/crop-team.mjs
+    homePhoto: '/team/claudio-home.jpg',
     imgPos: 'object-top',
     bio: 'Experiência em ETL, modelagem estatística, machine learning, pipelines de dados e visualização analítica utilizando R, Python e Power BI. Atua no desenvolvimento de arquiteturas analíticas, automação de processos e soluções orientadas por dados aplicadas a sistemas complexos.',
     tags: ['R', 'Python', 'Power BI', 'Machine Learning', 'Pipelines'],
@@ -159,6 +161,7 @@ export const team = [
     role: 'Bióloga · Cientista e Engenheira de Dados',
     title: 'Doutora em Ecologia',
     photo: '/team/graziella.jpg',
+    homePhoto: '/team/graziella-home.jpg',
     imgPos: 'object-top',
     bio: 'Atua com ETL, modelagem estatística, automação de processos, inteligência analítica e desenvolvimento de soluções aplicadas a dados ambientais, integrando ciência e tecnologia para construção de fluxos analíticos escaláveis.',
     tags: ['ETL', 'Estatística', 'Automação', 'Dados Ambientais'],
@@ -168,6 +171,7 @@ export const team = [
     role: 'Bióloga · Cientista e Analista de Dados',
     title: 'Doutora em Ecologia',
     photo: '/team/thaise.jpg',
+    homePhoto: '/team/thaise-home.jpg',
     imgPos: 'object-top',
     bio: 'Experiência em gestão de dados e metadados, modelagem estatística, automação analítica e desenvolvimento de relatórios técnicos. Atua na organização e estruturação de processos analíticos orientados por dados.',
     tags: ['Metadados', 'Modelagem', 'Relatórios', 'Estruturação'],
